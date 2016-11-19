@@ -38,7 +38,40 @@
 - (ChartCellViewModel *)viewModelForCellAtIndex:(NSIndexPath *)indexPath
 {
     //Create custom view model for each cell
-    return [ChartCellViewModel new];
+    ChartCellViewModel *viewModel;
+
+    switch (indexPath.row) {
+        case 0:
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel.chartType = ChartTypePie;
+            viewModel.title = @"Browsers";
+            break;
+        case 1:
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel.chartType = ChartTypeVerticalBars;
+            viewModel.title = @"Platform";
+            break;
+        case 2:
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel.chartType = ChartTypePie;
+            viewModel.title = @"Geolocation";
+            break;
+        case 3:
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel.chartType = ChartTypeHorizontalBars;
+            viewModel.title = @"Rating";
+            break;
+        case 4:
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel.chartType = ChartTypePie;
+            viewModel.title = @"Labels";
+            break;
+
+        default:
+            break;
+    }
+
+    return viewModel;
 }
 
 @end

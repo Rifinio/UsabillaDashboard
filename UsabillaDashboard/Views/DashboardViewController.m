@@ -92,4 +92,9 @@
     return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width);
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"selected element at index : %ld", indexPath.row);
+}
+
 @end

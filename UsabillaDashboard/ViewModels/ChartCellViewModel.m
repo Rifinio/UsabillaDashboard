@@ -7,14 +7,17 @@
 //
 
 #import "ChartCellViewModel.h"
+#import "FeedbackStore.h"
 
 @implementation ChartCellViewModel
 
-- (instancetype)init
+- (instancetype)initWithStore:(FeedbackStore *)store
 {
     self = [super init];
     if (self) {
-        _title = @"test title";
+        NSArray *keys = @[@"Jan",@"feb", @"mar", @"apr", @"mai"];
+        NSArray *values = @[@(2000.0), @(1000.0), @(3000.0), @(1500.0), @(2500.0)];
+        _keyValues = @{@"keys":keys, @"values":values};
     }
     return self;
 }
