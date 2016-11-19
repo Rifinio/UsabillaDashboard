@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DashboardViewModel.h"
+#import "DashboardViewController.h"
+#import "FeedbackStore.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    // Create feedback store
+    FeedbackStore *feedbackStore = [[FeedbackStore alloc] init];
+    // Create view model and inject store
+    DashboardViewModel *vm = [[DashboardViewModel alloc] initWithStore:feedbackStore];
+    // Create ViewController and inject view model
+    DashboardViewController *dvc = [[DashboardViewController alloc] initWithViewModel:vm];
+    // set rootviewcontroller as NavigationController
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
+
+    self.window.rootViewController = nvc;
+
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

@@ -13,7 +13,6 @@
 		CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */; };
 		CD7E7DA21DE07BDD00A76692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7DA01DE07BDD00A76692 /* LaunchScreen.storyboard */; };
 		CD7E7DAD1DE07BDD00A76692 /* UsabillaDashboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */; };
-		CD7E7DBF1DE07FD800A76692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7DBC1DE07FD800A76692 /* Main.storyboard */; };
 		CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DC51DE080E200A76692 /* NSURLSession+RAC.m */; };
 		CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DC81DE0813100A76692 /* FeedbackStore.m */; };
 		CD7E7DCC1DE081B300A76692 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DCB1DE081B300A76692 /* Feedback.m */; };
@@ -49,7 +48,6 @@
 		CD7E7DA81DE07BDD00A76692 /* UsabillaDashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsabillaDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsabillaDashboardTests.m; sourceTree = "<group>"; };
 		CD7E7DAE1DE07BDD00A76692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD7E7DBC1DE07FD800A76692 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CD7E7DC41DE080E200A76692 /* NSURLSession+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+RAC.h"; sourceTree = "<group>"; };
 		CD7E7DC51DE080E200A76692 /* NSURLSession+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+RAC.m"; sourceTree = "<group>"; };
 		CD7E7DC71DE0813100A76692 /* FeedbackStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackStore.h; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			children = (
 				CD7E7DCD1DE084F500A76692 /* DashboardViewController.h */,
 				CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */,
-				CD7E7DBC1DE07FD800A76692 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7E7DBF1DE07FD800A76692 /* Main.storyboard in Resources */,
 				CD7E7DA21DE07BDD00A76692 /* LaunchScreen.storyboard in Resources */,
 				CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */,
 			);

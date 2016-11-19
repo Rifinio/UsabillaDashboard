@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DashboardViewModel; // forward declaration
+
 @interface DashboardViewController : UIViewController
+
+- (instancetype)initWithViewModel:(DashboardViewModel *)viewModel;
 
 @end

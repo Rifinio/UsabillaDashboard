@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+@class FeedbackStore;
 
 @interface DashboardViewModel : NSObject
+
+@property (nonatomic, readonly) RACSignal *hasUpdatedContent;
+
+- (instancetype)initWithStore:(FeedbackStore *)feedbackStore;
 
 @end
