@@ -30,4 +30,10 @@
     return self;
 }
 
+- (NSString *)title
+{
+    return @"Dashboard";
+}
+
+
 @end

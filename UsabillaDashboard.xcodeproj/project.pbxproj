@@ -18,6 +18,8 @@
 		CD7E7DCC1DE081B300A76692 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DCB1DE081B300A76692 /* Feedback.m */; };
 		CD7E7DCF1DE084F500A76692 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */; };
 		CD7E7DD21DE0873700A76692 /* DashboardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DD11DE0873700A76692 /* DashboardViewModel.m */; };
+		CD7E7DD61DE093BE00A76692 /* ChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DD51DE093BE00A76692 /* ChartCollectionViewCell.m */; };
+		CD7E7DD91DE0966500A76692 /* ChartCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DD81DE0966500A76692 /* ChartCellViewModel.m */; };
 		D1C56D0B632DDDBB54CD5621 /* Pods_UsabillaDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6CB51C636752DABAF1A9EE /* Pods_UsabillaDashboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,10 @@
 		CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		CD7E7DD01DE0873700A76692 /* DashboardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewModel.h; sourceTree = "<group>"; };
 		CD7E7DD11DE0873700A76692 /* DashboardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewModel.m; sourceTree = "<group>"; };
+		CD7E7DD41DE093BE00A76692 /* ChartCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartCollectionViewCell.h; sourceTree = "<group>"; };
+		CD7E7DD51DE093BE00A76692 /* ChartCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartCollectionViewCell.m; sourceTree = "<group>"; };
+		CD7E7DD71DE0966500A76692 /* ChartCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartCellViewModel.h; sourceTree = "<group>"; };
+		CD7E7DD81DE0966500A76692 /* ChartCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartCellViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,8 @@
 			children = (
 				CD7E7DCD1DE084F500A76692 /* DashboardViewController.h */,
 				CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */,
+				CD7E7DD41DE093BE00A76692 /* ChartCollectionViewCell.h */,
+				CD7E7DD51DE093BE00A76692 /* ChartCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +186,8 @@
 			children = (
 				CD7E7DD01DE0873700A76692 /* DashboardViewModel.h */,
 				CD7E7DD11DE0873700A76692 /* DashboardViewModel.m */,
+				CD7E7DD71DE0966500A76692 /* ChartCellViewModel.h */,
+				CD7E7DD81DE0966500A76692 /* ChartCellViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -407,8 +417,10 @@
 				CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */,
 				CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */,
 				CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */,
+				CD7E7DD61DE093BE00A76692 /* ChartCollectionViewCell.m in Sources */,
 				CD7E7DD21DE0873700A76692 /* DashboardViewModel.m in Sources */,
 				CD7E7D941DE07BDD00A76692 /* main.m in Sources */,
+				CD7E7DD91DE0966500A76692 /* ChartCellViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

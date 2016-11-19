@@ -17,4 +17,6 @@
 
 - (instancetype)initWithStore:(FeedbackStore *)feedbackStore;
 
+- (NSString *)title;
+
 @end
