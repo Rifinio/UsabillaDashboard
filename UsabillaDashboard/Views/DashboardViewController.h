@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DashboardViewController.h
 //  UsabillaDashboard
 //
 //  Created by Adil BOUGAMZA on 19/11/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DashboardViewController : UIViewController
 
 @end
-
