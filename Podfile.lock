@@ -2,6 +2,9 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - Charts (3.0.0):
+    - Charts/Core (= 3.0.0)
+  - Charts/Core (3.0.0)
   - Masonry (1.0.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -13,14 +16,16 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework
+  - Charts
   - Masonry
   - ReactiveCocoa (= 2.5)
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Charts: beb341928d2135613b4325a6c6aff9f2f6de895e
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
-PODFILE CHECKSUM: 323efc84658e6e310ec63ddd45cbdf7c95922022
+PODFILE CHECKSUM: 5f6e075e7f6c617770fdc03d06b8ac050d9cfb96
 
 COCOAPODS: 1.1.1

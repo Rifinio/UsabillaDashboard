@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06490B80B5B620DE174CA9DD3729591C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>229DD938AF0C8B69C370BFA44CC20575</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22A92A536B4E227C0BAC4E3C3CB3E330</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64EFF154CBF3E077C7E71876A151EBBB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0AB9046C8ED081091BF35C90BCB6B49</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D52144DE9D7255DE912490FF5A806573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD04F4A72FEC7315291361EE899EEF13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
