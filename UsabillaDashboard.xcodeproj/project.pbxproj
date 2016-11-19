@@ -15,6 +15,9 @@
 		CD7E7DAD1DE07BDD00A76692 /* UsabillaDashboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */; };
 		CD7E7DBE1DE07FD800A76692 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DBB1DE07FD800A76692 /* ViewController.m */; };
 		CD7E7DBF1DE07FD800A76692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7DBC1DE07FD800A76692 /* Main.storyboard */; };
+		CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DC51DE080E200A76692 /* NSURLSession+RAC.m */; };
+		CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DC81DE0813100A76692 /* FeedbackStore.m */; };
+		CD7E7DCC1DE081B300A76692 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DCB1DE081B300A76692 /* Feedback.m */; };
 		D1C56D0B632DDDBB54CD5621 /* Pods_UsabillaDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6CB51C636752DABAF1A9EE /* Pods_UsabillaDashboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,12 @@
 		CD7E7DBB1DE07FD800A76692 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CD7E7DBC1DE07FD800A76692 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CD7E7DBD1DE07FD800A76692 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD7E7DC41DE080E200A76692 /* NSURLSession+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+RAC.h"; sourceTree = "<group>"; };
+		CD7E7DC51DE080E200A76692 /* NSURLSession+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+RAC.m"; sourceTree = "<group>"; };
+		CD7E7DC71DE0813100A76692 /* FeedbackStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackStore.h; sourceTree = "<group>"; };
+		CD7E7DC81DE0813100A76692 /* FeedbackStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackStore.m; sourceTree = "<group>"; };
+		CD7E7DCA1DE081B300A76692 /* Feedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feedback.h; sourceTree = "<group>"; };
+		CD7E7DCB1DE081B300A76692 /* Feedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feedback.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				CD7E7DBB1DE07FD800A76692 /* ViewController.m */,
-				CD7E7DBC1DE07FD800A76692 /* Main.storyboard */,
 				CD7E7DBD1DE07FD800A76692 /* ViewController.h */,
+				CD7E7DBC1DE07FD800A76692 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +167,8 @@
 		CD7E7DC01DE07FE500A76692 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CD7E7DC41DE080E200A76692 /* NSURLSession+RAC.h */,
+				CD7E7DC51DE080E200A76692 /* NSURLSession+RAC.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -172,6 +183,8 @@
 		CD7E7DC21DE0802C00A76692 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				CD7E7DC71DE0813100A76692 /* FeedbackStore.h */,
+				CD7E7DC81DE0813100A76692 /* FeedbackStore.m */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -179,6 +192,8 @@
 		CD7E7DC31DE0804100A76692 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CD7E7DCA1DE081B300A76692 /* Feedback.h */,
+				CD7E7DCB1DE081B300A76692 /* Feedback.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -386,8 +401,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7E7DCC1DE081B300A76692 /* Feedback.m in Sources */,
 				CD7E7DBE1DE07FD800A76692 /* ViewController.m in Sources */,
 				CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */,
+				CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */,
+				CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */,
 				CD7E7D941DE07BDD00A76692 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
