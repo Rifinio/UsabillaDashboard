@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8894DFDA99B1D2735ED8B04A0CB80EF5</key>
+		<key>8A267660E1AD4832DE75665F2F87AEA3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0AB9046C8ED081091BF35C90BCB6B49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E236A6F48BC90E1BA489EDB8506FD625</key>
+		<key>FD04F4A72FEC7315291361EE899EEF13</key>
 		<dict>
 			<key>primary</key>
 			<true/>

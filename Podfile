@@ -7,6 +7,7 @@ target 'UsabillaDashboard' do
 
   # Pods for UsabillaDashboard
   pod 'Masonry'
+  pod 'ChameleonFramework'
 
   target 'UsabillaDashboardTests' do
     inherit! :search_paths
