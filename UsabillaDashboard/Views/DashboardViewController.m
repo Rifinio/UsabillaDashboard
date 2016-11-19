@@ -19,6 +19,7 @@
 
 @property (nonatomic,strong, readonly) DashboardViewModel *viewModel;
 @property (nonatomic, strong) UICollectionView *collectoinView;
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -51,6 +52,22 @@
 
     [self.collectoinView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
 
+
+//    _activityIndicator = [[UIActivityIndicatorView alloc]
+//                                             initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//
+//    self.activityIndicator.center = self.view.center;
+//    [self.activityIndicator startAnimating];
+//    [self.view addSubview:self.activityIndicator];
+
+//
+    _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:self.activityIndicator];
+    [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+    }];
+    [self.activityIndicator startAnimating];
+
     [self bindViewModel];
 }
 
@@ -59,16 +76,13 @@
     self.navigationItem.title = [self.viewModel title];
 
     @weakify(self);
-
     [[self.viewModel.hasUpdatedContent
       deliverOnMainThread] // important, or view won't update instantly
      subscribeNext:^(id _) {
          @strongify(self); // this, together with @weakify, prevents a retain cycle
-         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
-         [self.collectoinView reloadSections:indexSet];
+         [self.collectoinView reloadData];
+         [self.activityIndicator stopAnimating];
      }];
-
-
 }
 
 - (void)didReceiveMemoryWarning {

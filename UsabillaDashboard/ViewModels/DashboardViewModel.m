@@ -24,8 +24,8 @@
     self = [super init];
     if (self) {
         _store = feedbackStore;
-        RAC(self, feedBackList) = [[self.store fetchFeedBack] startWith:@[]];
-        _hasUpdatedContent = [[RACObserve(self, feedBackList) distinctUntilChanged] mapReplace:@YES];
+        RAC(self, feedBackList) = [self.store fetchFeedBack];
+        _hasUpdatedContent = [[RACObserve(self, feedBackList) ignore:nil] mapReplace:@YES];
     }
     return self;
 }
@@ -48,12 +48,12 @@
     switch (indexPath.row) {
         case 0:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
-            viewModel.chartType = ChartTypeVerticalBars;
+            viewModel.chartType = ChartTypePie;
             viewModel.title = @"Browsers";
             break;
         case 1:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
-            viewModel.chartType = ChartTypePie;
+            viewModel.chartType = ChartTypeHorizontalBars;
             viewModel.title = @"Platform";
             break;
         case 2:
