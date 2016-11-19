@@ -18,6 +18,7 @@
 		CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DC81DE0813100A76692 /* FeedbackStore.m */; };
 		CD7E7DCC1DE081B300A76692 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DCB1DE081B300A76692 /* Feedback.m */; };
 		CD7E7DCF1DE084F500A76692 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */; };
+		CD7E7DD21DE0873700A76692 /* DashboardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DD11DE0873700A76692 /* DashboardViewModel.m */; };
 		D1C56D0B632DDDBB54CD5621 /* Pods_UsabillaDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6CB51C636752DABAF1A9EE /* Pods_UsabillaDashboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		CD7E7DCB1DE081B300A76692 /* Feedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feedback.m; sourceTree = "<group>"; };
 		CD7E7DCD1DE084F500A76692 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		CD7E7DD01DE0873700A76692 /* DashboardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewModel.h; sourceTree = "<group>"; };
+		CD7E7DD11DE0873700A76692 /* DashboardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +160,9 @@
 		CD7E7DB71DE07EA900A76692 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CD7E7DBC1DE07FD800A76692 /* Main.storyboard */,
 				CD7E7DCD1DE084F500A76692 /* DashboardViewController.h */,
 				CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */,
+				CD7E7DBC1DE07FD800A76692 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,8 @@
 		CD7E7DC11DE0801400A76692 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CD7E7DD01DE0873700A76692 /* DashboardViewModel.h */,
+				CD7E7DD11DE0873700A76692 /* DashboardViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */,
 				CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */,
 				CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */,
+				CD7E7DD21DE0873700A76692 /* DashboardViewModel.m in Sources */,
 				CD7E7D941DE07BDD00A76692 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
