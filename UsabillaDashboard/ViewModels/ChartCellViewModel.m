@@ -9,15 +9,25 @@
 #import "ChartCellViewModel.h"
 #import "FeedbackStore.h"
 
+@interface ChartCellViewModel()
+
+@property (nonatomic, weak) FeedbackStore *store;
+
+@end
+
 @implementation ChartCellViewModel
 
 - (instancetype)initWithStore:(FeedbackStore *)store
 {
     self = [super init];
     if (self) {
-        NSArray *keys = @[@"Jan",@"feb", @"mar", @"apr", @"mai"];
-        NSArray *values = @[@(2000.0), @(1000.0), @(3000.0), @(1500.0), @(2500.0)];
-        _keyValues = @{@"keys":keys, @"values":values};
+        _store = store;
+        NSDictionary *browserData = [self.store browsersDataDictionary];
+        NSLog(@"*** Browser data ***\n%@", browserData);
+
+//        NSArray *keys = @[@"Jan",@"feb", @"mar", @"apr", @"mai"];
+//        NSArray *values = @[@(2000.0), @(1000.0), @(3000.0), @(1500.0), @(2500.0)];
+        _keyValues = @{@"keys":browserData.allKeys, @"values":browserData.allValues};
     }
     return self;
 }

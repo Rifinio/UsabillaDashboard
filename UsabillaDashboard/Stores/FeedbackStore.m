@@ -34,4 +34,21 @@
             }];
 }
 
+- (NSDictionary *)browsersDataDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    for (Feedback *feedback in self.feedBackList) {
+        NSNumber *count = dict[feedback.browserName];
+        if (count) {
+            double countInt = count.doubleValue + 1;
+            dict[feedback.browserName] = @(countInt);
+        } else {
+            dict[feedback.browserName] = @0.0;
+        }
+    }
+
+    return [dict copy];
+}
+
 @end

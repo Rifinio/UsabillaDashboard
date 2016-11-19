@@ -64,6 +64,9 @@
 
 - (void)setChartView
 {
+    if (self.chart) {
+        return;
+    }
     switch (self.viewModel.chartType) {
         case ChartTypePie:
         {
