@@ -10,6 +10,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @class FeedbackStore;
+@class ChartCellViewModel;
 
 @interface DashboardViewModel : NSObject
 
@@ -18,5 +19,6 @@
 - (instancetype)initWithStore:(FeedbackStore *)feedbackStore;
 
 - (NSString *)title;
+- (ChartCellViewModel *)viewModelForCellAtIndex:(NSIndexPath *)indexPath;
 
 @end

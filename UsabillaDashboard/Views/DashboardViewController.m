@@ -38,18 +38,18 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor flatRedColor];
 
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    _collectoinView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    _collectoinView = [[UICollectionView alloc] initWithFrame:CGRectZero
+                                         collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     self.collectoinView.dataSource = self;
     self.collectoinView.delegate = self;
     self.collectoinView.alwaysBounceVertical = YES;
     self.collectoinView.backgroundColor = [UIColor flatWhiteColor];
     [self.view addSubview:self.collectoinView];
-    
-    [self.collectoinView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
     [self.collectoinView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+
+    [self.collectoinView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
 
     [self bindViewModel];
 }
@@ -83,8 +83,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ChartCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
-    ChartCellViewModel *cvm = [ChartCellViewModel new];
-    [cell setViewModel:cvm];
+    [cell setViewModel:[self.viewModel viewModelForCellAtIndex:indexPath]];
     return cell;
 }
 

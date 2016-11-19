@@ -8,7 +8,7 @@
 
 #import "DashboardViewModel.h"
 #import "FeedbackStore.h"
-
+#import "ChartCellViewModel.h"
 
 @interface DashboardViewModel()
 
@@ -35,5 +35,10 @@
     return @"Dashboard";
 }
 
+- (ChartCellViewModel *)viewModelForCellAtIndex:(NSIndexPath *)indexPath
+{
+    //Create custom view model for each cell
+    return [ChartCellViewModel new];
+}
 
 @end
