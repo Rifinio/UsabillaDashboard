@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5216628B41DD524F23E80B01 /* Pods_UsabillaDashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CFD4AD886F8657A24E58C1 /* Pods_UsabillaDashboardTests.framework */; };
 		CD7E7D941DE07BDD00A76692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D931DE07BDD00A76692 /* main.m */; };
 		CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D961DE07BDD00A76692 /* AppDelegate.m */; };
-		CD7E7D9A1DE07BDD00A76692 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D991DE07BDD00A76692 /* ViewController.m */; };
-		CD7E7D9D1DE07BDD00A76692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9B1DE07BDD00A76692 /* Main.storyboard */; };
 		CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */; };
 		CD7E7DA21DE07BDD00A76692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7DA01DE07BDD00A76692 /* LaunchScreen.storyboard */; };
 		CD7E7DAD1DE07BDD00A76692 /* UsabillaDashboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */; };
+		CD7E7DBE1DE07FD800A76692 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DBB1DE07FD800A76692 /* ViewController.m */; };
+		CD7E7DBF1DE07FD800A76692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7DBC1DE07FD800A76692 /* Main.storyboard */; };
+		D1C56D0B632DDDBB54CD5621 /* Pods_UsabillaDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6CB51C636752DABAF1A9EE /* Pods_UsabillaDashboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +29,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025994644A547389962A6BBB /* Pods-UsabillaDashboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsabillaDashboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-UsabillaDashboard/Pods-UsabillaDashboard.release.xcconfig"; sourceTree = "<group>"; };
+		0D6CB51C636752DABAF1A9EE /* Pods_UsabillaDashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsabillaDashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49CFD4AD886F8657A24E58C1 /* Pods_UsabillaDashboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsabillaDashboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BBDE32D71AA5EFEBAFB0838 /* Pods-UsabillaDashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsabillaDashboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsabillaDashboard/Pods-UsabillaDashboard.debug.xcconfig"; sourceTree = "<group>"; };
+		A5BD49D0C68D0DE9DDA4D7A4 /* Pods-UsabillaDashboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsabillaDashboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsabillaDashboardTests/Pods-UsabillaDashboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB2E25DAC10BA7C527B88C9B /* Pods-UsabillaDashboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsabillaDashboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UsabillaDashboardTests/Pods-UsabillaDashboardTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD7E7D8F1DE07BDD00A76692 /* UsabillaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsabillaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7D931DE07BDD00A76692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD7E7D951DE07BDD00A76692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD7E7D961DE07BDD00A76692 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD7E7D981DE07BDD00A76692 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CD7E7D991DE07BDD00A76692 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CD7E7D9C1DE07BDD00A76692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD7E7DA11DE07BDD00A76692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7E7DA31DE07BDD00A76692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7E7DA81DE07BDD00A76692 /* UsabillaDashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsabillaDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsabillaDashboardTests.m; sourceTree = "<group>"; };
 		CD7E7DAE1DE07BDD00A76692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7E7DBB1DE07FD800A76692 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD7E7DBC1DE07FD800A76692 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CD7E7DBD1DE07FD800A76692 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C56D0B632DDDBB54CD5621 /* Pods_UsabillaDashboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5216628B41DD524F23E80B01 /* Pods_UsabillaDashboardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3F32B104F9447CCF8269EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D6CB51C636752DABAF1A9EE /* Pods_UsabillaDashboard.framework */,
+				49CFD4AD886F8657A24E58C1 /* Pods_UsabillaDashboardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48EC481F8429C52A6A77640A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BBDE32D71AA5EFEBAFB0838 /* Pods-UsabillaDashboard.debug.xcconfig */,
+				025994644A547389962A6BBB /* Pods-UsabillaDashboard.release.xcconfig */,
+				A5BD49D0C68D0DE9DDA4D7A4 /* Pods-UsabillaDashboardTests.debug.xcconfig */,
+				CB2E25DAC10BA7C527B88C9B /* Pods-UsabillaDashboardTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CD7E7D861DE07BDD00A76692 = {
 			isa = PBXGroup;
 			children = (
 				CD7E7D911DE07BDD00A76692 /* UsabillaDashboard */,
 				CD7E7DAB1DE07BDD00A76692 /* UsabillaDashboardTests */,
 				CD7E7D901DE07BDD00A76692 /* Products */,
+				48EC481F8429C52A6A77640A /* Pods */,
+				0E3F32B104F9447CCF8269EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +115,11 @@
 			children = (
 				CD7E7D951DE07BDD00A76692 /* AppDelegate.h */,
 				CD7E7D961DE07BDD00A76692 /* AppDelegate.m */,
-				CD7E7D981DE07BDD00A76692 /* ViewController.h */,
-				CD7E7D991DE07BDD00A76692 /* ViewController.m */,
-				CD7E7D9B1DE07BDD00A76692 /* Main.storyboard */,
+				CD7E7DB71DE07EA900A76692 /* Views */,
+				CD7E7DC31DE0804100A76692 /* Models */,
+				CD7E7DC11DE0801400A76692 /* ViewModels */,
+				CD7E7DC21DE0802C00A76692 /* Stores */,
+				CD7E7DC01DE07FE500A76692 /* Networking */,
 				CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */,
 				CD7E7DA01DE07BDD00A76692 /* LaunchScreen.storyboard */,
 				CD7E7DA31DE07BDD00A76692 /* Info.plist */,
@@ -111,6 +145,44 @@
 			path = UsabillaDashboardTests;
 			sourceTree = "<group>";
 		};
+		CD7E7DB71DE07EA900A76692 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD7E7DBB1DE07FD800A76692 /* ViewController.m */,
+				CD7E7DBC1DE07FD800A76692 /* Main.storyboard */,
+				CD7E7DBD1DE07FD800A76692 /* ViewController.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD7E7DC01DE07FE500A76692 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CD7E7DC11DE0801400A76692 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD7E7DC21DE0802C00A76692 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		CD7E7DC31DE0804100A76692 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD7E7DB11DE07BDD00A76692 /* Build configuration list for PBXNativeTarget "UsabillaDashboard" */;
 			buildPhases = (
+				13EDE1EB8ED1F1260CE8619D /* [CP] Check Pods Manifest.lock */,
 				CD7E7D8B1DE07BDD00A76692 /* Sources */,
 				CD7E7D8C1DE07BDD00A76692 /* Frameworks */,
 				CD7E7D8D1DE07BDD00A76692 /* Resources */,
+				DF176FB0E55FA9A58CC66B18 /* [CP] Embed Pods Frameworks */,
+				FDEC0B265534D6C5B2FA8FD9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD7E7DB41DE07BDD00A76692 /* Build configuration list for PBXNativeTarget "UsabillaDashboardTests" */;
 			buildPhases = (
+				7F6FA2F07B2F81A0341E2E3F /* [CP] Check Pods Manifest.lock */,
 				CD7E7DA41DE07BDD00A76692 /* Sources */,
 				CD7E7DA51DE07BDD00A76692 /* Frameworks */,
 				CD7E7DA61DE07BDD00A76692 /* Resources */,
+				3D93F59D2EEF5AA1C26002A8 /* [CP] Embed Pods Frameworks */,
+				73E23392B052D6FCBA46F06A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,9 +273,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7E7DBF1DE07FD800A76692 /* Main.storyboard in Resources */,
 				CD7E7DA21DE07BDD00A76692 /* LaunchScreen.storyboard in Resources */,
 				CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */,
-				CD7E7D9D1DE07BDD00A76692 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,12 +288,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13EDE1EB8ED1F1260CE8619D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3D93F59D2EEF5AA1C26002A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UsabillaDashboardTests/Pods-UsabillaDashboardTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E23392B052D6FCBA46F06A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UsabillaDashboardTests/Pods-UsabillaDashboardTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F6FA2F07B2F81A0341E2E3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF176FB0E55FA9A58CC66B18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UsabillaDashboard/Pods-UsabillaDashboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDEC0B265534D6C5B2FA8FD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UsabillaDashboard/Pods-UsabillaDashboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD7E7D8B1DE07BDD00A76692 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7E7D9A1DE07BDD00A76692 /* ViewController.m in Sources */,
+				CD7E7DBE1DE07FD800A76692 /* ViewController.m in Sources */,
 				CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */,
 				CD7E7D941DE07BDD00A76692 /* main.m in Sources */,
 			);
@@ -240,14 +411,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CD7E7D9B1DE07BDD00A76692 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD7E7D9C1DE07BDD00A76692 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD7E7DA01DE07BDD00A76692 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -351,6 +514,7 @@
 		};
 		CD7E7DB21DE07BDD00A76692 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BBDE32D71AA5EFEBAFB0838 /* Pods-UsabillaDashboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
@@ -364,6 +528,7 @@
 		};
 		CD7E7DB31DE07BDD00A76692 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 025994644A547389962A6BBB /* Pods-UsabillaDashboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
@@ -377,6 +542,7 @@
 		};
 		CD7E7DB51DE07BDD00A76692 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5BD49D0C68D0DE9DDA4D7A4 /* Pods-UsabillaDashboardTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
@@ -390,6 +556,7 @@
 		};
 		CD7E7DB61DE07BDD00A76692 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2E25DAC10BA7C527B88C9B /* Pods-UsabillaDashboardTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
@@ -420,6 +587,7 @@
 				CD7E7DB31DE07BDD00A76692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD7E7DB41DE07BDD00A76692 /* Build configuration list for PBXNativeTarget "UsabillaDashboardTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +596,7 @@
 				CD7E7DB61DE07BDD00A76692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
