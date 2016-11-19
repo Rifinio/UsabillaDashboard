@@ -103,6 +103,9 @@
 
 - (void)setViewModel:(ChartCellViewModel *)viewModel
 {
+    if(self.viewModel)
+        return;
+
     _viewModel = viewModel;
     [self setChartView];
 
@@ -126,39 +129,6 @@
           NSLog(@"rac values : %@", self.chartValues);
           [self setChartView:self.chart dataPoints:self.chartKeys values:self.chartValues];
       }];
-
-//    RACSignal *keysSignal = [RACObserve(self, chartKeys) filter:^BOOL(NSArray *array) {
-//        return array.count;
-//    }];
-//    RACSignal *valuesSignal = [RACObserve(self, chartValues) filter:^BOOL(NSArray *array) {
-//        return array.count;
-//    }];
-
-//    RACSignal *combined = [RACSignal
-//                           zip:@[ keysSignal, valuesSignal ]
-//                           reduce:^(NSArray *keysArray, NSArray *valuesArray) {
-//                               return [letter stringByAppendingString:number];
-//                           }];
-
-    // Outputs: A1 B2 C3 D4
-//    [combined subscribeNext:^(id x) {
-//        NSLog(@"%@", x);
-//    }];
-
-
-//    RACSignal *updateEventSignal = [RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]];
-//    RACSignal *gestureSignal = [[UITapGestureRecognizer new] rac_gestureSignal];
-//    [[RACSignal zip:@[keysSignal, valuesSignal]
-//                     reduce:^id(NSArray *keys, NSArray *values){
-//                         return RACTuplePack(keys, values);
-//                     }]
-//     subscribeNext:^(RACTuple *keyValuesTuple) {
-//         NSArray *keys = keyValuesTuple.first;
-//         NSArray *values = keyValuesTuple.second;
-//         NSLog(@"TUPPPPPLE \n keys : %@ | values %@", keys, values);
-//     }];
-
-
 }
 
 #pragma mark setup chart views for different types
