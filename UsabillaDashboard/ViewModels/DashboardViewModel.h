@@ -20,5 +20,6 @@
 
 - (NSString *)title;
 - (ChartCellViewModel *)viewModelForCellAtIndex:(NSIndexPath *)indexPath;
+- (NSInteger)numberOfItems;
 
 @end

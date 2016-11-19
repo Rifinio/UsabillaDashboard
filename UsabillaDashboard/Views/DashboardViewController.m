@@ -59,12 +59,15 @@
     self.navigationItem.title = [self.viewModel title];
 
     @weakify(self);
-    [[[self.viewModel hasUpdatedContent]
-     deliverOnMainThread]
-     subscribeNext:^(id x) {
-         @strongify(self);
-         self.navigationItem.title = @"loaded";
-    }];
+
+    [[self.viewModel.hasUpdatedContent
+      deliverOnMainThread] // important, or view won't update instantly
+     subscribeNext:^(id _) {
+         @strongify(self); // this, together with @weakify, prevents a retain cycle
+         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+         [self.collectoinView reloadSections:indexSet];
+     }];
+
 
 }
 
@@ -77,7 +80,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.viewModel numberOfItems];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

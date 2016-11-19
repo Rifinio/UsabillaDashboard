@@ -25,7 +25,7 @@
     if (self) {
         _store = feedbackStore;
         RAC(self, feedBackList) = [[self.store fetchFeedBack] startWith:@[]];
-        _hasUpdatedContent = [RACObserve(self, feedBackList) mapReplace:@YES];
+        _hasUpdatedContent = [[RACObserve(self, feedBackList) distinctUntilChanged] mapReplace:@YES];
     }
     return self;
 }
@@ -33,6 +33,11 @@
 - (NSString *)title
 {
     return @"Dashboard";
+}
+
+- (NSInteger)numberOfItems
+{
+    return (self.feedBackList) ? 5 : 0;
 }
 
 - (ChartCellViewModel *)viewModelForCellAtIndex:(NSIndexPath *)indexPath
@@ -43,12 +48,12 @@
     switch (indexPath.row) {
         case 0:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
-            viewModel.chartType = ChartTypePie;
+            viewModel.chartType = ChartTypeVerticalBars;
             viewModel.title = @"Browsers";
             break;
         case 1:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
-            viewModel.chartType = ChartTypeVerticalBars;
+            viewModel.chartType = ChartTypePie;
             viewModel.title = @"Platform";
             break;
         case 2:

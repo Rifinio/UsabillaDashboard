@@ -64,9 +64,6 @@
 
 - (void)setChartView
 {
-    if (self.chart) {
-        return;
-    }
     switch (self.viewModel.chartType) {
         case ChartTypePie:
         {
@@ -120,19 +117,55 @@
                             }];
 
     @weakify(self);
-    [RACObserve(self, chartKeys)
-     subscribeNext:^(__unused id _) {
-         @strongify(self);
-         NSLog(@"rac keys : %@", self.chartKeys);
-         NSLog(@"rac values : %@", self.chartValues);
-         [self setChartView:self.chart dataPoints:self.chartKeys values:self.chartValues];
-    }];
+    [[RACObserve(self, chartValues)
+      filter:^BOOL(NSArray *array) {
+          return array.count > 0;
+      }] subscribeNext:^(__unused id _) {
+          @strongify(self);
+          NSLog(@"rac keys : %@", self.chartKeys);
+          NSLog(@"rac values : %@", self.chartValues);
+          [self setChartView:self.chart dataPoints:self.chartKeys values:self.chartValues];
+      }];
+
+//    RACSignal *keysSignal = [RACObserve(self, chartKeys) filter:^BOOL(NSArray *array) {
+//        return array.count;
+//    }];
+//    RACSignal *valuesSignal = [RACObserve(self, chartValues) filter:^BOOL(NSArray *array) {
+//        return array.count;
+//    }];
+
+//    RACSignal *combined = [RACSignal
+//                           zip:@[ keysSignal, valuesSignal ]
+//                           reduce:^(NSArray *keysArray, NSArray *valuesArray) {
+//                               return [letter stringByAppendingString:number];
+//                           }];
+
+    // Outputs: A1 B2 C3 D4
+//    [combined subscribeNext:^(id x) {
+//        NSLog(@"%@", x);
+//    }];
+
+
+//    RACSignal *updateEventSignal = [RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]];
+//    RACSignal *gestureSignal = [[UITapGestureRecognizer new] rac_gestureSignal];
+//    [[RACSignal zip:@[keysSignal, valuesSignal]
+//                     reduce:^id(NSArray *keys, NSArray *values){
+//                         return RACTuplePack(keys, values);
+//                     }]
+//     subscribeNext:^(RACTuple *keyValuesTuple) {
+//         NSArray *keys = keyValuesTuple.first;
+//         NSArray *values = keyValuesTuple.second;
+//         NSLog(@"TUPPPPPLE \n keys : %@ | values %@", keys, values);
+//     }];
+
+
 }
 
 #pragma mark setup chart views for different types
 
 - (void) setChartView:(ChartViewBase *)chartView dataPoints:(NSArray<NSString *> *)keys values:(NSArray<NSNumber *> *)values
 {
+    NSAssert((keys.count || values.count), @"chart key and values cant be nil");
     switch (self.viewModel.chartType) {
         case ChartTypePie:
         {
@@ -153,6 +186,8 @@
 
 - (void)setPieChart:(PieChartView *)pieChartView dataPoints:(NSArray<NSString *> *)points values:(NSArray<NSNumber *> *)values
 {
+    NSAssert((points || values), @"cant be nil");
+
     pieChartView.noDataText = @"no data yet !";
     pieChartView.descriptionText = @"this is monthly usage !";
 
