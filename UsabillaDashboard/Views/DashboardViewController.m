@@ -124,7 +124,7 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
             break;
         case 4:
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:pieChartCellId forIndexPath:indexPath];
-            cell.colors = [ChartColorTemplates material];
+            cell.colors = [ChartColorTemplates colorful];
             break;
     }
 

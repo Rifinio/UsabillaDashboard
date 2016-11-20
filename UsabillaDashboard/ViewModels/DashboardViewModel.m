@@ -54,17 +54,17 @@
         case 1:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIPlatform];
             viewModel.chartType = ChartTypeVerticalBars;
-            viewModel.title = @"Platform";
+            viewModel.title = @"Platforms";
             break;
         case 2:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIGeolocation];
             viewModel.chartType = ChartTypeHorizontalBars;
-            viewModel.title = @"Geolocation";
+            viewModel.title = @"Geolocations";
             break;
         case 3:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIRating];
             viewModel.chartType = ChartTypeHorizontalBars;
-            viewModel.title = @"Rating";
+            viewModel.title = @"Ratings";
             break;
         case 4:
             viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPILabel];
