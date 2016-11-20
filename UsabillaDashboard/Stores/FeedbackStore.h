@@ -20,7 +20,7 @@
 
 - (NSDictionary *)browsersDataDictionary;
 - (NSDictionary *)platformDataDictionary;
-- (NSDictionary *)geoLocatoinDataDictionary;
+- (NSDictionary *)geoLocatoinDataDictionaryMaxEntries:(NSInteger)max;
 - (NSDictionary *)ratingDataDictionary;
 
 @end

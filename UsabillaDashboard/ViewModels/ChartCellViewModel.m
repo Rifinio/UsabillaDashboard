@@ -31,7 +31,7 @@
                 keyValues = [self.store platformDataDictionary];
                 break;
             case KPIGeolocation:
-                keyValues = [self.store geoLocatoinDataDictionary];
+                keyValues = [self.store geoLocatoinDataDictionaryMaxEntries:5];
                 break;
             case KPIRating:
                 keyValues = [self.store ratingDataDictionary];

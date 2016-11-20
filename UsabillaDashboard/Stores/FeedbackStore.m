@@ -69,10 +69,12 @@
     return [dict copy];
 }
 
-- (NSDictionary *)geoLocatoinDataDictionary
+- (NSDictionary *)geoLocatoinDataDictionaryMaxEntries:(NSInteger)max
 {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    NSAssert((max> 0 && max < 15) , @"Max entries should be between 0 and 15");
 
+    int maxCount = 0;
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     for (Feedback *feedback in self.feedBackList) {
         NSString *geoLocationStr = [feedback.geoLocation stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSNumber *count = dict[geoLocationStr];
@@ -81,6 +83,11 @@
             dict[geoLocationStr] = @(countInt);
         } else {
             dict[geoLocationStr] = @1.0;
+        }
+
+        maxCount++;
+        if (maxCount > max) {
+            break;
         }
     }
 

@@ -84,4 +84,11 @@
       }];
 }
 
+#pragma mark setup chart views for different types
+
+- (void) setChartView:(ChartViewBase *)chartView dataPoints:(NSArray<NSString *> *)keys values:(NSArray<NSNumber *> *)values
+{
+    NSAssert((keys.count || values.count), @"chart key and values cant be nil");
+}
+
 @end
