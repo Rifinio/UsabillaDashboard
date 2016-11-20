@@ -15,6 +15,9 @@
     self = [super init];
     if (self) {
         _browserName = dict[@"computed_browser"][@"Browser"];
+        _platform = dict[@"computed_browser"][@"Platform"];
+        _geoLocation = dict[@"computed_location"];
+        _rating = [dict[@"rating"] integerValue];
         _email = (!dict[@"email"] || dict[@"email"] == nil ||  dict[@"email"] == [NSNull null]) ? @"" : dict[@"email"];
     }
     return self;
