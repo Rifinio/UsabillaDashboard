@@ -18,5 +18,8 @@
 
 - (RACSignal *)fetchFeedBack;
 - (NSDictionary *)browsersDataDictionary;
+- (NSDictionary *)platformDataDictionary;
+- (NSDictionary *)geoLocatoinDataDictionary;
+- (NSDictionary *)ratingDataDictionary;
 
 @end

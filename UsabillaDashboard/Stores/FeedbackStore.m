@@ -44,7 +44,59 @@
             double countInt = count.doubleValue + 1;
             dict[feedback.browserName] = @(countInt);
         } else {
-            dict[feedback.browserName] = @0.0;
+            dict[feedback.browserName] = @1.0;
+        }
+    }
+
+    return [dict copy];
+}
+
+- (NSDictionary *)platformDataDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    for (Feedback *feedback in self.feedBackList) {
+        NSNumber *count = dict[feedback.platform];
+        if (count) {
+            double countInt = count.doubleValue + 1;
+            dict[feedback.platform] = @(countInt);
+        } else {
+            dict[feedback.platform] = @1.0;
+        }
+    }
+
+    return [dict copy];
+}
+
+- (NSDictionary *)geoLocatoinDataDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    for (Feedback *feedback in self.feedBackList) {
+        NSString *geoLocationStr = [feedback.geoLocation stringByReplacingOccurrencesOfString:@" " withString:@""];
+        NSNumber *count = dict[geoLocationStr];
+        if (count) {
+            double countInt = count.doubleValue + 1;
+            dict[geoLocationStr] = @(countInt);
+        } else {
+            dict[geoLocationStr] = @1.0;
+        }
+    }
+
+    return [dict copy];
+}
+
+- (NSDictionary *)ratingDataDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    for (Feedback *feedback in self.feedBackList) {
+        NSNumber *count = dict[@(feedback.rating)];
+        if (count) {
+            double countInt = count.doubleValue + 1;
+            dict[@(feedback.rating)] = @(countInt);
+        } else {
+            dict[@(feedback.rating)] = @1.0;
         }
     }
 
