@@ -14,6 +14,7 @@
 
 - (RACSignal *)fetchFeedBack
 {
+    //https://api.myjson.com/bins/58cee
     NSURL *url = [NSURL URLWithString:@"http://localhost:8888/usabilla/usabilla-ws.json"];
 
     return [[[NSURLSession sharedSession] rac_GET:url]

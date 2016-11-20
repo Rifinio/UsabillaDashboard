@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSArray<Feedback *> *feedBackList;
 
 - (RACSignal *)fetchFeedBack;
+
 - (NSDictionary *)browsersDataDictionary;
 - (NSDictionary *)platformDataDictionary;
 - (NSDictionary *)geoLocatoinDataDictionary;

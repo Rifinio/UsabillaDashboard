@@ -9,15 +9,9 @@
 #import "ChartCollectionViewCell.h"
 #import "ChartCellViewModel.h"
 
-#import <Masonry/Masonry.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import <Charts/Charts-Swift.h>
-#import <ChameleonFramework/Chameleon.h>
-
 @interface ChartCollectionViewCell()
 
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIView *chartView;
 @property (nonatomic, strong) NSArray *chartKeys;
 @property (nonatomic, strong) NSArray *chartValues;
 
@@ -34,7 +28,7 @@
         self.backgroundColor = [UIColor flatWhiteColor];
 
         _titleLabel = [UILabel new];
-        self.titleLabel.font = [UIFont boldSystemFontOfSize:16.0f];
+        self.titleLabel.font = [UIFont boldSystemFontOfSize:22.0f];
         self.titleLabel.textColor = [UIColor flatMintColor];
         [self.contentView addSubview:self.titleLabel];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -51,63 +45,22 @@
         }];
 
         UIView *bottomLineView = [UIView new];
-        bottomLineView.backgroundColor = [UIColor flatGrayColorDark];
+        bottomLineView.backgroundColor = [UIColor flatGrayColor];
         [self.contentView addSubview:bottomLineView];
         [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@1);
-            make.left.right.equalTo(self.contentView);
+            make.right.equalTo(self.contentView);
+            make.left.equalTo(self.contentView).offset(20);
             make.bottom.equalTo(self.contentView);
         }];
     }
+
     return self;
-}
-
-- (void)setChartView
-{
-    switch (self.viewModel.chartType) {
-        case ChartTypePie:
-        {
-            _chart = [[PieChartView alloc] init];
-            [self.chartView addSubview:self.chart];
-//        self.pieChartView.delegate = self;
-            [self.chart mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self.chartView);
-            }];
-
-            break;
-        }
-        case ChartTypeHorizontalBars:{
-            _chart = [[HorizontalBarChartView alloc] init];
-            ((HorizontalBarChartView *)self.chart).fitBars = YES;
-            [self.chartView addSubview:self.chart];
-//            self.chart.delegate = self;
-            [self.chart mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self.chartView);
-            }];
-            break;
-        }
-        case ChartTypeVerticalBars:{
-            _chart = [[BarChartView alloc] init];
-            [self.chartView addSubview:self.chart];
-//            self.chartView.delegate = self;
-            [self.chart mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self.chartView);
-            }];
-
-            break;
-        }
-        default:
-            break;
-    }
 }
 
 - (void)setViewModel:(ChartCellViewModel *)viewModel
 {
-    if(self.viewModel)
-        return;
-
     _viewModel = viewModel;
-    [self setChartView];
 
     RAC(self.titleLabel, text) = RACObserve(self.viewModel, title);
     RAC(self, chartKeys) = [[RACObserve(self.viewModel, keyValues) ignore:nil]

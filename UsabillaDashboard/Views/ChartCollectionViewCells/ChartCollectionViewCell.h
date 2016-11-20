@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Charts/Charts-Swift.h>
+#import <Masonry/Masonry.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ChameleonFramework/Chameleon.h>
 
 @class ChartCellViewModel;
 
 @interface ChartCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) ChartCellViewModel *viewModel;
+@property (nonatomic, strong) UIView *chartView;
 
 @end

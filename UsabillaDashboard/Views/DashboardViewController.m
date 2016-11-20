@@ -11,9 +11,18 @@
 #import <Masonry/Masonry.h>
 
 #import "DashboardViewModel.h"
-#import "ChartCollectionViewCell.h"
 #import "ChartCellViewModel.h"
 
+#import "ChartCollectionViewCell.h"
+#import "PieChartCollectionViewCell.h"
+#import "BarChartCollectionViewCell.h"
+#import "HorizontalBarChartCollectionViewCell.h"
+
+
+static NSString *baseCellId = @"baseCellId";
+static NSString *pieChartCellId = @"pieChartCellId";
+static NSString *barChartCellId = @"barChartCellId";
+static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
 
 @interface DashboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -39,6 +48,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor flatRedColor];
 
+    // set collection view
     _collectoinView = [[UICollectionView alloc] initWithFrame:CGRectZero
                                          collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     self.collectoinView.dataSource = self;
@@ -49,8 +59,13 @@
         make.edges.equalTo(self.view);
     }];
 
-    [self.collectoinView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
+    // register collection view cells
+    [self.collectoinView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:baseCellId];
+    [self.collectoinView registerClass:[PieChartCollectionViewCell class] forCellWithReuseIdentifier:pieChartCellId];
+    [self.collectoinView registerClass:[BarChartCollectionViewCell class] forCellWithReuseIdentifier:barChartCellId];
+    [self.collectoinView registerClass:[HorizontalBarChartCollectionViewCell class] forCellWithReuseIdentifier:HorizontalBarChartCellId];
 
+    // Activity indicator
     _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self.view addSubview:self.activityIndicator];
     [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -89,7 +104,21 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ChartCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
+    ChartCollectionViewCell *cell;
+    switch (indexPath.row) {
+        case 0:
+        case 4:
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:pieChartCellId forIndexPath:indexPath];
+            break;
+        case 1:
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:barChartCellId forIndexPath:indexPath];
+            break;
+        case 2:
+        case 3:
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:HorizontalBarChartCellId forIndexPath:indexPath];
+            break;
+    }
+
     [cell setViewModel:[self.viewModel viewModelForCellAtIndex:indexPath]];
     return cell;
 }
