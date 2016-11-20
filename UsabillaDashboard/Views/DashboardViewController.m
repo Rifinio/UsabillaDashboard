@@ -107,15 +107,24 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
     ChartCollectionViewCell *cell;
     switch (indexPath.row) {
         case 0:
-        case 4:
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:pieChartCellId forIndexPath:indexPath];
+            cell.colors = [ChartColorTemplates joyful];
             break;
         case 1:
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:barChartCellId forIndexPath:indexPath];
+            cell.colors = [ChartColorTemplates pastel];
             break;
         case 2:
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:HorizontalBarChartCellId forIndexPath:indexPath];
+            cell.colors = [ChartColorTemplates vordiplom];
+            break;
         case 3:
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:HorizontalBarChartCellId forIndexPath:indexPath];
+            cell.colors = [ChartColorTemplates colorful];
+            break;
+        case 4:
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:pieChartCellId forIndexPath:indexPath];
+            cell.colors = [ChartColorTemplates material];
             break;
     }
 

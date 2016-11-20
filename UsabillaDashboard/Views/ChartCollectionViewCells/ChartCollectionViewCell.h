@@ -18,5 +18,8 @@
 
 @property (nonatomic, strong) ChartCellViewModel *viewModel;
 @property (nonatomic, strong) UIView *chartView;
+@property (nonatomic, strong) NSArray<UIColor *> * colors;
+
+- (void) setChartView:(ChartViewBase *)chartView dataPoints:(NSArray<NSString *> *)keys values:(NSArray<NSNumber *> *)values;
 
 @end
