@@ -10,6 +10,8 @@
 #import <ChameleonFramework/Chameleon.h>
 #import <Masonry/Masonry.h>
 
+#import "DetailViewController.h"
+
 #import "DashboardViewModel.h"
 #import "ChartCellViewModel.h"
 
@@ -139,7 +141,8 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"selected element at index : %ld", indexPath.row);
+    DetailViewController *dvc = [DetailViewController new];
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 @end

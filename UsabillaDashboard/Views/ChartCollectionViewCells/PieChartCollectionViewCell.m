@@ -8,22 +8,47 @@
 
 #import "PieChartCollectionViewCell.h"
 
-@interface PieChartCollectionViewCell()
-@property(nonatomic, strong) PieChartView *chart;
+@interface PieChartCollectionViewCell() <ChartViewDelegate>
+
+@property (nonatomic, strong) PieChartView *chart;
+@property (nonatomic, strong) UILabel *selectedLabel;
+@property (nonatomic, strong) NSArray *keys;
+@property (nonatomic, strong) NSArray *values;
+
 @end
 
 @implementation PieChartCollectionViewCell
+
+
+- (void)prepareForReuse
+{
+    self.selectedLabel.text = @"";
+    [self.chart reloadInputViews];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+
         _chart = [[PieChartView alloc] init];
         [self.chartView addSubview:self.chart];
-        //        self.pieChartView.delegate = self;
+        self.chart.delegate = self;
         [self.chart mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.chartView);
         }];
+
+        _selectedLabel = [UILabel new];
+        self.selectedLabel.textColor = [UIColor flatPlumColor];
+        self.selectedLabel.textAlignment = NSTextAlignmentCenter;
+        self.selectedLabel.numberOfLines = 2;
+        [self.chartView addSubview:self.selectedLabel];
+        [self.selectedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@55);
+            make.width.equalTo(@120);
+            make.center.equalTo(self.chartView);
+        }];
+
     }
     return self;
 }
@@ -36,6 +61,9 @@
 - (void)setPieChart:(PieChartView *)pieChartView dataPoints:(NSArray<NSString *> *)points values:(NSArray<NSNumber *> *)values
 {
     NSAssert((points || values), @"cant be nil");
+
+    self.keys = points;
+    self.values = values;
 
     pieChartView.noDataText = @"no data yet !";
     pieChartView.descriptionText = @"this is monthly usage !";
@@ -78,6 +106,13 @@
 
     [pieChartView animateWithXAxisDuration:2.0 yAxisDuration:2.0];
     pieChartView.data = chartData;
+}
+
+-(void)chartValueSelected:(ChartViewBase *)chartView entry:(ChartDataEntry *)entry highlight:(ChartHighlight *)highlight
+{
+    PieChartDataEntry *pieEntry = (PieChartDataEntry *)entry;
+    NSString *selectedStr = [NSString stringWithFormat:@"%@\n%.2f %%", pieEntry.label, pieEntry.value];
+    self.selectedLabel.text = selectedStr;
 }
 
 @end
