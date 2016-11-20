@@ -22,5 +22,6 @@
 - (NSDictionary *)platformDataDictionary;
 - (NSDictionary *)geoLocatoinDataDictionaryMaxEntries:(NSInteger)max;
 - (NSDictionary *)ratingDataDictionary;
+- (NSDictionary *)labelsDataDictionary;
 
 @end

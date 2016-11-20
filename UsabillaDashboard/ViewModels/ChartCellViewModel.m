@@ -37,7 +37,7 @@
                 keyValues = [self.store ratingDataDictionary];
                 break;
             case KPILabel:
-                keyValues = [self.store browsersDataDictionary];
+                keyValues = [self.store labelsDataDictionary];
                 break;
             default:
                 break;

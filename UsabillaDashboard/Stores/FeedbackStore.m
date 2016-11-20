@@ -111,4 +111,26 @@
     return [dict copy];
 }
 
+
+- (NSDictionary *)labelsDataDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+
+    for (Feedback *feedback in self.feedBackList) {
+        if (feedback.labels) {
+            for (NSString *label in feedback.labels) {
+                NSNumber *count = dict[label];
+                if (count) {
+                    double countInt = count.doubleValue + 1;
+                    dict[label] = @(countInt);
+                } else {
+                    dict[label] = @1.0;
+                }
+            }
+        }
+    }
+
+    return [dict copy];
+}
+
 @end

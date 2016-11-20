@@ -18,6 +18,7 @@
         _platform = dict[@"computed_browser"][@"Platform"];
         _geoLocation = dict[@"computed_location"];
         _rating = [dict[@"rating"] integerValue];
+        _labels = dict[@"labels"];
         _email = (!dict[@"email"] || dict[@"email"] == nil ||  dict[@"email"] == [NSNull null]) ? @"" : dict[@"email"];
     }
     return self;

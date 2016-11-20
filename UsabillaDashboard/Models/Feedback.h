@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString *platform;
 @property (nonatomic, strong) NSString *geoLocation;
 @property (nonatomic, assign) NSInteger rating;
+@property (nonatomic, strong) NSArray<NSString *> *labels;
 
 - (instancetype)initWithJsonDict:(NSDictionary *)dict;
 

@@ -67,7 +67,7 @@
             viewModel.title = @"Rating";
             break;
         case 4:
-            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIPlatform];
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPILabel];
             viewModel.chartType = ChartTypePie;
             viewModel.title = @"Labels";
             break;
