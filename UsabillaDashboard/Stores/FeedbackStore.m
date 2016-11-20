@@ -10,7 +10,29 @@
 #import "NSURLSession+RAC.h"
 #import "Feedback.h"
 
+
+@interface FeedbackStore()
+
+@property (nonatomic, strong) NSArray *labels;
+
+@end
+
+static NSString *labelBug = @"Bug";
+static NSString *labelCompliment = @"Compliment";
+static NSString *labelQuestion = @"Question";
+static NSString *labelSuggestion = @"Suggestion";
+static NSString *labelOther = @"Other";
+
 @implementation FeedbackStore
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _labels = @[labelBug, labelCompliment, labelQuestion, labelSuggestion];
+    }
+    return self;
+}
 
 - (RACSignal *)fetchFeedBack
 {
@@ -119,18 +141,30 @@
     for (Feedback *feedback in self.feedBackList) {
         if (feedback.labels) {
             for (NSString *label in feedback.labels) {
-                NSNumber *count = dict[label];
+                NSString *curatedLabel = [self labelForFeedbackLabel:label];
+                NSNumber *count = dict[curatedLabel];
                 if (count) {
                     double countInt = count.doubleValue + 1;
-                    dict[label] = @(countInt);
+                    dict[curatedLabel] = @(countInt);
                 } else {
-                    dict[label] = @1.0;
+                    dict[curatedLabel] = @1.0;
                 }
             }
         }
     }
 
     return [dict copy];
+}
+
+- (NSString *)labelForFeedbackLabel:(NSString *)feedbackLabel
+{
+    for (NSString *label in self.labels) {
+        if ([label.lowercaseString isEqualToString:feedbackLabel.lowercaseString]) {
+            return label;
+        }
+    }
+
+    return labelOther;
 }
 
 @end
