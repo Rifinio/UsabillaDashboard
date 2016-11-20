@@ -12,6 +12,7 @@
 @interface ChartCollectionViewCell()
 
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *moreLabel;
 @property (nonatomic, strong) NSArray *chartKeys;
 @property (nonatomic, strong) NSArray *chartValues;
 
@@ -27,12 +28,26 @@
     if (self) {
         self.backgroundColor = [UIColor flatWhiteColor];
 
+        _moreLabel = [UILabel new];
+        self.moreLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+        self.moreLabel.textColor = [UIColor flatBlueColor];
+        self.moreLabel.textAlignment = NSTextAlignmentRight;
+        self.moreLabel.text = @"more >";
+        [self.contentView addSubview:self.moreLabel];
+        [self.moreLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView).offset(10);
+            make.right.equalTo(self.contentView).offset(-10);
+            make.height.equalTo(@33);
+            make.width.equalTo(@100);
+        }];
+
         _titleLabel = [UILabel new];
         self.titleLabel.font = [UIFont boldSystemFontOfSize:22.0f];
         self.titleLabel.textColor = [UIColor flatMintColor];
         [self.contentView addSubview:self.titleLabel];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.right.equalTo(self.contentView).insets(UIEdgeInsetsMake(10, 20, 0, 10));
+            make.left.top.equalTo(self.contentView).insets(UIEdgeInsetsMake(10, 20, 0, 10));
+            make.right.equalTo(self.moreLabel);
             make.height.equalTo(@33);
         }];
 
