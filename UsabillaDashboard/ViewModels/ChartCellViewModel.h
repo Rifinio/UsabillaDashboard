@@ -16,12 +16,21 @@ typedef NS_ENUM(NSUInteger, ChartType) {
     ChartTypeHorizontalBars,
 };
 
+typedef NS_ENUM(NSUInteger, KPIType) { // KPI : Key Performance Indicator
+    KPIBrowser = 0,
+    KPIPlatform,
+    KPIGeolocation,
+    KPIRating,
+    KPILabel
+};
+
+
 @interface ChartCellViewModel : NSObject
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSDictionary *keyValues;
 @property (nonatomic, assign) ChartType chartType;
 
-- (instancetype)initWithStore:(FeedbackStore *)store;
+- (instancetype)initWithStore:(FeedbackStore *)store kpi:(KPIType)kpiType;
 
 @end

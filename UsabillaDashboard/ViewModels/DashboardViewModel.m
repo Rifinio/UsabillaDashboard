@@ -24,8 +24,8 @@
     self = [super init];
     if (self) {
         _store = feedbackStore;
-        RAC(self, feedBackList) = [self.store fetchFeedBack];
         _hasUpdatedContent = [[RACObserve(self, feedBackList) ignore:nil] mapReplace:@YES];
+        RAC(self, feedBackList) = [self.store fetchFeedBack];
     }
     return self;
 }
@@ -47,27 +47,27 @@
 
     switch (indexPath.row) {
         case 0:
-            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIBrowser];
             viewModel.chartType = ChartTypePie;
             viewModel.title = @"Browsers";
             break;
         case 1:
-            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
-            viewModel.chartType = ChartTypeHorizontalBars;
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIPlatform];
+            viewModel.chartType = ChartTypeVerticalBars;
             viewModel.title = @"Platform";
             break;
         case 2:
-            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
-            viewModel.chartType = ChartTypePie;
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIGeolocation];
+            viewModel.chartType = ChartTypeHorizontalBars;
             viewModel.title = @"Geolocation";
             break;
         case 3:
-            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIRating];
             viewModel.chartType = ChartTypeHorizontalBars;
             viewModel.title = @"Rating";
             break;
         case 4:
-            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store];
+            viewModel = [[ChartCellViewModel alloc] initWithStore:self.store kpi:KPIPlatform];
             viewModel.chartType = ChartTypePie;
             viewModel.title = @"Labels";
             break;

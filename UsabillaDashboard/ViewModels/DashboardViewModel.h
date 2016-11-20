@@ -19,7 +19,7 @@
 - (instancetype)initWithStore:(FeedbackStore *)feedbackStore;
 
 - (NSString *)title;
-- (ChartCellViewModel *)viewModelForCellAtIndex:(NSIndexPath *)indexPath;
 - (NSInteger)numberOfItems;
+- (ChartCellViewModel *)viewModelForCellAtIndex:(NSIndexPath *)indexPath;
 
 @end

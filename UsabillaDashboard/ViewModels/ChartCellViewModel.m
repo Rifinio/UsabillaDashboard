@@ -17,17 +17,34 @@
 
 @implementation ChartCellViewModel
 
-- (instancetype)initWithStore:(FeedbackStore *)store
+- (instancetype)initWithStore:(FeedbackStore *)store kpi:(KPIType)kpiType
 {
     self = [super init];
     if (self) {
         _store = store;
-        NSDictionary *browserData = [self.store browsersDataDictionary];
-        NSLog(@"*** Browser data ***\n%@", browserData);
+        NSDictionary *keyValues;
+        switch (kpiType) {
+            case KPIBrowser:
+                keyValues = [self.store browsersDataDictionary];
+                break;
+            case KPIPlatform:
+                keyValues = [self.store platformDataDictionary];
+                break;
+            case KPIGeolocation:
+                keyValues = [self.store geoLocatoinDataDictionary];
+                break;
+            case KPIRating:
+                keyValues = [self.store ratingDataDictionary];
+                break;
+            case KPILabel:
+                keyValues = [self.store browsersDataDictionary];
+                break;
+            default:
+                break;
+        }
 
-//        NSArray *keys = @[@"Jan",@"feb", @"mar", @"apr", @"mai"];
-//        NSArray *values = @[@(2000.0), @(1000.0), @(3000.0), @(1500.0), @(2500.0)];
-        _keyValues = @{@"keys":browserData.allKeys, @"values":browserData.allValues};
+        NSLog(@"*** dict data ***\n%@", keyValues);
+        _keyValues = @{@"keys":keyValues.allKeys, @"values":keyValues.allValues};
     }
     return self;
 }

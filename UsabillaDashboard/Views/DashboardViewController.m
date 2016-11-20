@@ -43,7 +43,6 @@
                                          collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     self.collectoinView.dataSource = self;
     self.collectoinView.delegate = self;
-    self.collectoinView.alwaysBounceVertical = YES;
     self.collectoinView.backgroundColor = [UIColor flatWhiteColor];
     [self.view addSubview:self.collectoinView];
     [self.collectoinView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -52,15 +51,6 @@
 
     [self.collectoinView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
 
-
-//    _activityIndicator = [[UIActivityIndicatorView alloc]
-//                                             initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-//
-//    self.activityIndicator.center = self.view.center;
-//    [self.activityIndicator startAnimating];
-//    [self.view addSubview:self.activityIndicator];
-
-//
     _activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self.view addSubview:self.activityIndicator];
     [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
