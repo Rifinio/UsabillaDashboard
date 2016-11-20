@@ -23,6 +23,7 @@
 		CD7E7DE41DE1CA4D00A76692 /* PieChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DE11DE1CA4D00A76692 /* PieChartCollectionViewCell.m */; };
 		CD7E7DE71DE1CA8600A76692 /* BarChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DE61DE1CA8600A76692 /* BarChartCollectionViewCell.m */; };
 		CD7E7DEA1DE1CEF500A76692 /* HorizontalBarChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DE91DE1CEF500A76692 /* HorizontalBarChartCollectionViewCell.m */; };
+		CD7E7DED1DE2023C00A76692 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DEC1DE2023C00A76692 /* DetailViewController.m */; };
 		D1C56D0B632DDDBB54CD5621 /* Pods_UsabillaDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6CB51C636752DABAF1A9EE /* Pods_UsabillaDashboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		CD7E7DE61DE1CA8600A76692 /* BarChartCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartCollectionViewCell.m; sourceTree = "<group>"; };
 		CD7E7DE81DE1CEF500A76692 /* HorizontalBarChartCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalBarChartCollectionViewCell.h; sourceTree = "<group>"; };
 		CD7E7DE91DE1CEF500A76692 /* HorizontalBarChartCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalBarChartCollectionViewCell.m; sourceTree = "<group>"; };
+		CD7E7DEB1DE2023C00A76692 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CD7E7DEC1DE2023C00A76692 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 			children = (
 				CD7E7DCD1DE084F500A76692 /* DashboardViewController.h */,
 				CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */,
+				CD7E7DEB1DE2023C00A76692 /* DetailViewController.h */,
+				CD7E7DEC1DE2023C00A76692 /* DetailViewController.m */,
 				CD7E7DDE1DE1CA0F00A76692 /* ChartCollectionViewCells */,
 			);
 			path = Views;
@@ -444,6 +449,7 @@
 				CD7E7DE71DE1CA8600A76692 /* BarChartCollectionViewCell.m in Sources */,
 				CD7E7DE41DE1CA4D00A76692 /* PieChartCollectionViewCell.m in Sources */,
 				CD7E7D941DE07BDD00A76692 /* main.m in Sources */,
+				CD7E7DED1DE2023C00A76692 /* DetailViewController.m in Sources */,
 				CD7E7DEA1DE1CEF500A76692 /* HorizontalBarChartCollectionViewCell.m in Sources */,
 				CD7E7DD91DE0966500A76692 /* ChartCellViewModel.m in Sources */,
 				CD7E7DE31DE1CA4D00A76692 /* ChartCollectionViewCell.m in Sources */,
