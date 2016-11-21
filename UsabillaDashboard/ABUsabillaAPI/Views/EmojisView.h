@@ -10,4 +10,6 @@
 
 @interface EmojisView : UIView
 
+@property (nonatomic, assign) NSInteger selectedRating;
+
 @end

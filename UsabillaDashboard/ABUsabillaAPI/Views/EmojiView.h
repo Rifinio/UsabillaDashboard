@@ -8,8 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class EmojiView;
+
+@protocol EmojiViewDelegate <NSObject>
+
+- (void)emojiButtonSelected:(EmojiView *)emojiView;
+- (void)emojiButtonDeselected:(EmojiView *)emojiView;
+
+@end
+
 @interface EmojiView : UIView
 
+@property (nonatomic, weak) id <EmojiViewDelegate> delegate;
+@property (nonatomic, assign) NSInteger rating;
+@property (nonatomic, assign) BOOL isSelected;
+
 - (instancetype)initForRating:(NSInteger)rating;
+
+- (void)setHighlighted:(BOOL)highlighted;
 
 @end

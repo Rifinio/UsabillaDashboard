@@ -8,26 +8,33 @@
 
 #import "EmojiView.h"
 #import <Masonry/Masonry.h>
+#import <ChameleonFramework/Chameleon.h>
 
 @interface EmojiView()
 
 @property (nonatomic, strong) UIView *selectionView;
 @property (nonatomic, strong) UIButton *emojiButton;
+
 @end
 
 @implementation EmojiView
+
+#pragma mark init
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        _isSelected = NO;
+
         self.backgroundColor = [UIColor clearColor];
         _selectionView = [UIView new];
         self.selectionView.backgroundColor = [UIColor clearColor];
-        self.selectionView.layer.cornerRadius = 35.0f;
+        self.selectionView.layer.cornerRadius = 31.0f;
         [self addSubview:self.selectionView];
         [self.selectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self);
+            make.center.equalTo(self);
+            make.height.width.equalTo(@62);
         }];
 
         _emojiButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -37,6 +44,8 @@
             make.center.equalTo(self.selectionView);
             make.height.width.equalTo(@56);
         }];
+
+        [self.emojiButton addTarget:self action:@selector(emojiClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
@@ -46,8 +55,31 @@
     self = [self init];
     if (self) {
         [self.emojiButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"face-%ld", rating]] forState:UIControlStateNormal];
+        _rating = rating;
     }
     return self;
+}
+
+
+#pragma mark button actions
+
+- (void)emojiClicked:(UIButton *)button
+{
+    NSLog(@"clicked :%ld", self.rating);
+
+    if (self.isSelected) {
+        [self setHighlighted:NO];
+        [self.delegate emojiButtonDeselected:self];
+    } else {
+        [self setHighlighted:YES];
+        [self.delegate emojiButtonSelected:self];
+    }
+}
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+    self.isSelected = highlighted;
+    self.selectionView.backgroundColor = (highlighted) ? [UIColor flatNavyBlueColor] : [UIColor clearColor];
 }
 
 @end

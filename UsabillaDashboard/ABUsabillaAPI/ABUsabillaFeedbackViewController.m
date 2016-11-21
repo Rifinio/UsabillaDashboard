@@ -45,12 +45,23 @@
         make.bottom.equalTo(navigationView).offset(-6);
     }];
 
+    //Emojis View
+    UILabel *labelWhatDoYouFeel = [UILabel new];
+    labelWhatDoYouFeel.font = [UIFont systemFontOfSize:15.0f];
+    labelWhatDoYouFeel.textColor = [UIColor flatNavyBlueColor];
+    labelWhatDoYouFeel.text = @"How do you feel about that ?";
+    [self.view addSubview:labelWhatDoYouFeel];
+    [labelWhatDoYouFeel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view).insets(UIEdgeInsetsMake(10, 10, 0, 10));
+        make.top.equalTo(navigationView.mas_bottom).offset(10);
+        make.height.equalTo(@33);
+    }];
+
     EmojisView *emoView = [EmojisView new];
     [self.view addSubview:emoView];
-
     [emoView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view).insets(UIEdgeInsetsMake(0, 10, 0, 10));
-        make.top.equalTo(navigationView.mas_bottom).offset(10);
+        make.top.equalTo(labelWhatDoYouFeel.mas_bottom).offset(10);
         make.height.equalTo(@70);
 
     }];
