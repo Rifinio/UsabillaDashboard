@@ -10,6 +10,7 @@
 #import <Masonry/Masonry.h>
 #import <ChameleonFramework/Chameleon.h>
 #import "EmojiView.h"
+#import "EmojisView.h"
 
 @interface ABUsabillaFeedbackViewController ()
 
@@ -44,21 +45,15 @@
         make.bottom.equalTo(navigationView).offset(-6);
     }];
 
-    //emojis view
-    UIView *emojisView = [UIView new];
-    emojisView.backgroundColor = [UIColor flatOrangeColor];
-    [self.view addSubview:emojisView];
-    [emojisView mas_makeConstraints:^(MASConstraintMaker *make) {
+    EmojisView *emoView = [EmojisView new];
+    [self.view addSubview:emoView];
+
+    [emoView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view).insets(UIEdgeInsetsMake(0, 10, 0, 10));
         make.top.equalTo(navigationView.mas_bottom).offset(10);
         make.height.equalTo(@70);
-    }];
 
-//    CGFloat borderMargin = [UIDevice isIPad] ? 37 : 10;
-//    [self.tierLevelViews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal
-//                                     withFixedSpacing:1
-//                                          leadSpacing:borderMargin
-//                                          tailSpacing:borderMargin];
+    }];
 
     UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];

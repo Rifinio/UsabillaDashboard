@@ -10,8 +10,9 @@
 		5216628B41DD524F23E80B01 /* Pods_UsabillaDashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CFD4AD886F8657A24E58C1 /* Pods_UsabillaDashboardTests.framework */; };
 		CD2057CA1DE27F5200D307DA /* ABUsabillaFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2057C81DE27F5200D307DA /* ABUsabillaFeedback.m */; };
 		CD2057CD1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */; };
-		CD52C8821DE3381F0025D8EF /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52C8811DE3381F0025D8EF /* EmojiView.m */; };
 		CD52C8841DE366B00025D8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */; };
+		CD52C8891DE38DCA0025D8EF /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52C8871DE38DCA0025D8EF /* EmojiView.m */; };
+		CD52C88C1DE3901D0025D8EF /* EmojisView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52C88B1DE3901D0025D8EF /* EmojisView.m */; };
 		CD7E7D941DE07BDD00A76692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D931DE07BDD00A76692 /* main.m */; };
 		CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D961DE07BDD00A76692 /* AppDelegate.m */; };
 		CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */; };
@@ -52,10 +53,12 @@
 		CD2057C91DE27F5200D307DA /* ABUsabillaFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABUsabillaFeedback.h; sourceTree = "<group>"; };
 		CD2057CB1DE27F7200D307DA /* ABUsabillaFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABUsabillaFeedbackViewController.h; sourceTree = "<group>"; };
 		CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABUsabillaFeedbackViewController.m; sourceTree = "<group>"; };
-		CD52C8801DE3381F0025D8EF /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
-		CD52C8811DE3381F0025D8EF /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
 		CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD52C8851DE370270025D8EF /* UsabillaDashboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UsabillaDashboard.entitlements; sourceTree = "<group>"; };
+		CD52C8871DE38DCA0025D8EF /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
+		CD52C8881DE38DCA0025D8EF /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
+		CD52C88A1DE3901D0025D8EF /* EmojisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojisView.h; sourceTree = "<group>"; };
+		CD52C88B1DE3901D0025D8EF /* EmojisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojisView.m; sourceTree = "<group>"; };
 		CD7E7D8F1DE07BDD00A76692 /* UsabillaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsabillaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7D931DE07BDD00A76692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD7E7D951DE07BDD00A76692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,8 +140,20 @@
 				CD2057C81DE27F5200D307DA /* ABUsabillaFeedback.m */,
 				CD2057CB1DE27F7200D307DA /* ABUsabillaFeedbackViewController.h */,
 				CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */,
+				CD52C8861DE38D900025D8EF /* Views */,
 			);
 			path = ABUsabillaAPI;
+			sourceTree = "<group>";
+		};
+		CD52C8861DE38D900025D8EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD52C8881DE38DCA0025D8EF /* EmojiView.h */,
+				CD52C8871DE38DCA0025D8EF /* EmojiView.m */,
+				CD52C88A1DE3901D0025D8EF /* EmojisView.h */,
+				CD52C88B1DE3901D0025D8EF /* EmojisView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CD7E7D861DE07BDD00A76692 = {
@@ -164,7 +179,6 @@
 		CD7E7D911DE07BDD00A76692 /* UsabillaDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				CD52C8851DE370270025D8EF /* UsabillaDashboard.entitlements */,
 				CD2057C71DE27F2700D307DA /* ABUsabillaAPI */,
 				CD7E7D951DE07BDD00A76692 /* AppDelegate.h */,
 				CD7E7D961DE07BDD00A76692 /* AppDelegate.m */,
@@ -174,6 +188,7 @@
 				CD7E7DC21DE0802C00A76692 /* Stores */,
 				CD7E7DC01DE07FE500A76692 /* Networking */,
 				CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */,
+				CD52C8851DE370270025D8EF /* UsabillaDashboard.entitlements */,
 				CD7E7DA01DE07BDD00A76692 /* LaunchScreen.storyboard */,
 				CD7E7DA31DE07BDD00A76692 /* Info.plist */,
 				CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */,
@@ -206,8 +221,6 @@
 				CD7E7DCE1DE084F500A76692 /* DashboardViewController.m */,
 				CD7E7DEB1DE2023C00A76692 /* DetailViewController.h */,
 				CD7E7DEC1DE2023C00A76692 /* DetailViewController.m */,
-				CD52C8801DE3381F0025D8EF /* EmojiView.h */,
-				CD52C8811DE3381F0025D8EF /* EmojiView.m */,
 				CD7E7DDE1DE1CA0F00A76692 /* ChartCollectionViewCells */,
 			);
 			path = Views;
@@ -474,12 +487,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD52C88C1DE3901D0025D8EF /* EmojisView.m in Sources */,
 				CD7E7DCC1DE081B300A76692 /* Feedback.m in Sources */,
 				CD7E7DCF1DE084F500A76692 /* DashboardViewController.m in Sources */,
 				CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */,
 				CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */,
 				CD2057CD1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m in Sources */,
-				CD52C8821DE3381F0025D8EF /* EmojiView.m in Sources */,
+				CD52C8891DE38DCA0025D8EF /* EmojiView.m in Sources */,
 				CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */,
 				CD7E7DD21DE0873700A76692 /* DashboardViewModel.m in Sources */,
 				CD2057CA1DE27F5200D307DA /* ABUsabillaFeedback.m in Sources */,
