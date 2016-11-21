@@ -4,6 +4,7 @@
 target 'UsabillaDashboard' do
   use_frameworks!
   pod 'ReactiveCocoa', '2.5'
+  pod 'Firebase/Core'
 
   # Pods for UsabillaDashboard
   pod 'Masonry'
