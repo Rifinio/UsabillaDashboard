@@ -15,7 +15,7 @@
 
 static NSInteger usabillaTag = 22888;
 
-@interface ABUsabillaFeedback()
+@interface ABUsabillaFeedback() <ABUsabillaFeedbackViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *selectedViews;
 @property (nonatomic, assign) NSInteger viewTag;
@@ -45,20 +45,21 @@ static NSInteger usabillaTag = 22888;
         [self.sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.sendButton setTitleColor:[UIColor flatGreenColorDark] forState:UIControlStateHighlighted];
         self.sendButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
-        [self.sendButton setTitle:@"Send" forState:UIControlStateNormal];
+        [self.sendButton setTitle:@"Tell us what's on your mind >" forState:UIControlStateNormal];
         self.sendButton.tag = self.viewTag;
-        [self.sendButton addTarget:self action:@selector(sendFeedBack:) forControlEvents:UIControlEventTouchUpInside];
+        [self.sendButton addTarget:self action:@selector(sendAction:) forControlEvents:UIControlEventTouchUpInside];
         self.viewTag++;
     }
+
     return self;
 }
 
-- (void)sendFeedBack:(UIButton *)button
+- (void)sendAction:(UIButton *)button
 {
     ABUsabillaFeedbackViewController *feedbackVC = [ABUsabillaFeedbackViewController new];
-    [self.delegateViewController presentViewController:feedbackVC animated:YES completion:nil];
+    feedbackVC.delagate = self;
 
-    NSLog(@"send");
+    [self.delegateViewController presentViewController:feedbackVC animated:YES completion:nil];
 }
 
 - (void)unHighlightViews
@@ -139,17 +140,13 @@ static NSInteger usabillaTag = 22888;
 
 - (void)buttonClicked:(UIView *)view
 {
-    UIViewController *delegateVC = (UIViewController *)self.delegate;
-    NSLog(@"maine view: %@ | view description : %@",delegateVC.description, view.superview.description);
+    [self.selectedViews addObject:view.superview];
     view.backgroundColor = [UIColor colorWithRed:255/255. green:0/255. blue:0/255. alpha:.3];
 }
 
 #pragma mark send feedback to firebase database
-- (void)sendFeedBack
+- (void)pushFeedBack:(NSDictionary *)feedBackDict
 {
-    // static values to be filled later with correct data
-    NSDictionary *viewsDict = @{@"viewcontroller":@"DashboardViewController",@"viewDescription":@"<UILabel: 0x7fc0e6501c00; frame = (20 10; 284 33); text = 'Browsers'; layer = <_UILabelLayer: 0x61800009bb70>>",@"frame":@"(20 10; 284 33)"};
-    NSDictionary *feedBackDict = @{@"Rating":@5, @"Comment":@"my first feedback",@"views":viewsDict};
     [[self.ref child:@"Feedback"] setValue:feedBackDict];
 }
 
@@ -159,6 +156,32 @@ static NSInteger usabillaTag = 22888;
 + (UIImage *)usabillaBarButtonImage
 {
     return [[UIImage imageNamed:@"usbailla-button-logo"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+#pragma Usabilla feedback controller delegates
+
+-(void)usabillaViewController:(ABUsabillaFeedbackViewController *)viewController didSendFeedBack:(NSDictionary *)feedBackDict
+{
+    NSMutableArray *viewsDescriptions = [NSMutableArray array];
+    for (UIView *view in self.selectedViews) {
+        [viewsDescriptions addObject:view.description];
+    }
+
+    NSMutableDictionary *readyFeedBackDict = [NSMutableDictionary dictionary];
+    readyFeedBackDict[@"Rating"] = feedBackDict[@"Rating"];
+    readyFeedBackDict[@"Comment"] = feedBackDict[@"Message"];
+    readyFeedBackDict[@"Views"] = [viewsDescriptions copy];
+    UIViewController *delegateVC = (UIViewController *)self.delegate;
+    readyFeedBackDict[@"ViewController"] = delegateVC.description;
+
+    [self pushFeedBack:[readyFeedBackDict copy]];
+
+    [viewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)usabillaViewControllerDidCancel:(ABUsabillaFeedbackViewController *)viewController
+{
+    [viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
