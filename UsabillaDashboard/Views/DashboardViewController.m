@@ -22,7 +22,6 @@
 
 #import "ABUsabillaFeedback.h"
 
-
 static NSString *baseCellId = @"baseCellId";
 static NSString *pieChartCellId = @"pieChartCellId";
 static NSString *barChartCellId = @"barChartCellId";
@@ -93,7 +92,6 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
     UIImage *image = [ABUsabillaFeedback usabillaBarButtonImage];
     UIBarButtonItem *feedBackButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(feedbackClicked)];
     self.navigationItem.rightBarButtonItem = feedBackButton;
-
 
     [self bindViewModel];
 }
@@ -166,8 +164,8 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailViewController *dvc = [DetailViewController new];
-    [self.navigationController pushViewController:dvc animated:YES];
+//    DetailViewController *dvc = [DetailViewController new];
+//    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 @end

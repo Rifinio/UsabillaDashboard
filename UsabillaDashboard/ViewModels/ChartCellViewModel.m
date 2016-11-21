@@ -31,7 +31,7 @@
                 keyValues = [self.store platformDataDictionary];
                 break;
             case KPIGeolocation:
-                keyValues = [self.store geoLocatoinDataDictionaryMaxEntries:5];
+                keyValues = [self.store geoLocatoinDataDictionaryMaxEntries:6];
                 break;
             case KPIRating:
                 keyValues = [self.store ratingDataDictionary];
@@ -43,7 +43,6 @@
                 break;
         }
 
-        NSLog(@"*** dict data ***\n%@", keyValues);
         _keyValues = @{@"keys":keyValues.allKeys, @"values":keyValues.allValues};
     }
     return self;

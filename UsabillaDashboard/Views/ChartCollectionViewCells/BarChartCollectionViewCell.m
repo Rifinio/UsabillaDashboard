@@ -38,31 +38,24 @@
 - (void)setBarChart:(BarChartView *)chartView dataPoints:(NSArray<NSString *> *)points values:(NSArray<NSNumber *> *)values
 {
     chartView.noDataText = @"no data yet !";
-    chartView.descriptionText = @"this is monthly usage !";
+    chartView.descriptionText = @"";
 
     // Create data entries for every data point
     NSMutableArray <BarChartDataEntry *> *dataEntries = [NSMutableArray array];
     for (int i = 0; i< points.count; i++) {
         BarChartDataEntry *dataEntry = [[BarChartDataEntry alloc] initWithX:i y:values[i].doubleValue];
-//        BarChartDataEntry *dataEntry = [[BarChartDataEntry alloc] initWithX:points[i].integerValue y:values[i].doubleValue];
         [dataEntries addObject:dataEntry];
     }
 
     // create a data set from all the data entries, and TITLE
-    BarChartDataSet *dataSet = [[BarChartDataSet alloc] initWithValues:dataEntries label:@"Units Sold"];
-    // Custom coloring
-    //set colors with an array or only one color
-    //    dataSet.colors = @[[UIColor redColor]];
+    BarChartDataSet *dataSet = [[BarChartDataSet alloc] initWithValues:dataEntries label:@""];
     // set colors with predefined charts colors
     dataSet.colors = self.colors;
 
     // create Chart Data to create the barChartView
     BarChartData *chartData = [[BarChartData alloc] initWithDataSet:dataSet];
 
-    //    self.barChartView.xAxis.labelPosition = XAxisLabelPositionBottom;
-
-    //    self.barChartView.animate[(xAxisDuration: 2.0, yAxisDuration: 2.0)
-    [chartView animateWithXAxisDuration:2.0 yAxisDuration:2.0];
+    [chartView animateWithXAxisDuration:1.5 yAxisDuration:1.5];
     chartView.data = chartData;
 }
 

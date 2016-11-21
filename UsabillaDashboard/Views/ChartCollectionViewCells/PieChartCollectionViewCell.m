@@ -66,7 +66,7 @@
     self.values = values;
 
     pieChartView.noDataText = @"no data yet !";
-    pieChartView.descriptionText = @"this is monthly usage !";
+    pieChartView.descriptionText = @"";
 
     // set the legend properties
     ChartLegend *l = pieChartView.legend;
@@ -87,7 +87,7 @@
     }
 
     // create a data set from all the data entries, and TITLE
-    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataEntries label:@"Units Sold"];
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:dataEntries label:@""];
     // set colors with predefined charts colors
     dataSet.colors = self.colors;
 
