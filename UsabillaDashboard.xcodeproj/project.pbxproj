@@ -55,6 +55,7 @@
 		CD52C8801DE3381F0025D8EF /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
 		CD52C8811DE3381F0025D8EF /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
 		CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD52C8851DE370270025D8EF /* UsabillaDashboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UsabillaDashboard.entitlements; sourceTree = "<group>"; };
 		CD7E7D8F1DE07BDD00A76692 /* UsabillaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsabillaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7D931DE07BDD00A76692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD7E7D951DE07BDD00A76692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		CD7E7D911DE07BDD00A76692 /* UsabillaDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CD52C8851DE370270025D8EF /* UsabillaDashboard.entitlements */,
 				CD2057C71DE27F2700D307DA /* ABUsabillaAPI */,
 				CD7E7D951DE07BDD00A76692 /* AppDelegate.h */,
 				CD7E7D961DE07BDD00A76692 /* AppDelegate.m */,
@@ -321,6 +323,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2XDF7R5YQ3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					CD7E7DA71DE07BDD00A76692 = {
 						CreatedOnToolsVersion = 8.0;
@@ -611,6 +618,7 @@
 			baseConfigurationReference = 6BBDE32D71AA5EFEBAFB0838 /* Pods-UsabillaDashboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UsabillaDashboard/UsabillaDashboard.entitlements;
 				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
 				INFOPLIST_FILE = UsabillaDashboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -625,6 +633,7 @@
 			baseConfigurationReference = 025994644A547389962A6BBB /* Pods-UsabillaDashboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UsabillaDashboard/UsabillaDashboard.entitlements;
 				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
 				INFOPLIST_FILE = UsabillaDashboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
