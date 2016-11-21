@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5216628B41DD524F23E80B01 /* Pods_UsabillaDashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CFD4AD886F8657A24E58C1 /* Pods_UsabillaDashboardTests.framework */; };
-		CD2057C61DE25AB900D307DA /* ABUsabillaFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2057C51DE25AB900D307DA /* ABUsabillaFeedback.m */; };
+		CD2057CA1DE27F5200D307DA /* ABUsabillaFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2057C81DE27F5200D307DA /* ABUsabillaFeedback.m */; };
+		CD2057CD1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */; };
 		CD7E7D941DE07BDD00A76692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D931DE07BDD00A76692 /* main.m */; };
 		CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D961DE07BDD00A76692 /* AppDelegate.m */; };
 		CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */; };
@@ -45,8 +46,10 @@
 		6BBDE32D71AA5EFEBAFB0838 /* Pods-UsabillaDashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsabillaDashboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsabillaDashboard/Pods-UsabillaDashboard.debug.xcconfig"; sourceTree = "<group>"; };
 		A5BD49D0C68D0DE9DDA4D7A4 /* Pods-UsabillaDashboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsabillaDashboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsabillaDashboardTests/Pods-UsabillaDashboardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2E25DAC10BA7C527B88C9B /* Pods-UsabillaDashboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsabillaDashboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UsabillaDashboardTests/Pods-UsabillaDashboardTests.release.xcconfig"; sourceTree = "<group>"; };
-		CD2057C41DE25AB900D307DA /* ABUsabillaFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABUsabillaFeedback.h; sourceTree = "<group>"; };
-		CD2057C51DE25AB900D307DA /* ABUsabillaFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABUsabillaFeedback.m; sourceTree = "<group>"; };
+		CD2057C81DE27F5200D307DA /* ABUsabillaFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABUsabillaFeedback.m; sourceTree = "<group>"; };
+		CD2057C91DE27F5200D307DA /* ABUsabillaFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABUsabillaFeedback.h; sourceTree = "<group>"; };
+		CD2057CB1DE27F7200D307DA /* ABUsabillaFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABUsabillaFeedbackViewController.h; sourceTree = "<group>"; };
+		CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABUsabillaFeedbackViewController.m; sourceTree = "<group>"; };
 		CD7E7D8F1DE07BDD00A76692 /* UsabillaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsabillaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7D931DE07BDD00A76692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD7E7D951DE07BDD00A76692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +124,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD2057C71DE27F2700D307DA /* ABUsabillaAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CD2057C81DE27F5200D307DA /* ABUsabillaFeedback.m */,
+				CD2057C91DE27F5200D307DA /* ABUsabillaFeedback.h */,
+				CD2057CB1DE27F7200D307DA /* ABUsabillaFeedbackViewController.h */,
+				CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */,
+			);
+			path = ABUsabillaAPI;
+			sourceTree = "<group>";
+		};
 		CD7E7D861DE07BDD00A76692 = {
 			isa = PBXGroup;
 			children = (
@@ -144,8 +158,7 @@
 		CD7E7D911DE07BDD00A76692 /* UsabillaDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				CD2057C41DE25AB900D307DA /* ABUsabillaFeedback.h */,
-				CD2057C51DE25AB900D307DA /* ABUsabillaFeedback.m */,
+				CD2057C71DE27F2700D307DA /* ABUsabillaAPI */,
 				CD7E7D951DE07BDD00A76692 /* AppDelegate.h */,
 				CD7E7D961DE07BDD00A76692 /* AppDelegate.m */,
 				CD7E7DB71DE07EA900A76692 /* Views */,
@@ -449,9 +462,10 @@
 				CD7E7DCF1DE084F500A76692 /* DashboardViewController.m in Sources */,
 				CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */,
 				CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */,
+				CD2057CD1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m in Sources */,
 				CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */,
 				CD7E7DD21DE0873700A76692 /* DashboardViewModel.m in Sources */,
-				CD2057C61DE25AB900D307DA /* ABUsabillaFeedback.m in Sources */,
+				CD2057CA1DE27F5200D307DA /* ABUsabillaFeedback.m in Sources */,
 				CD7E7DE71DE1CA8600A76692 /* BarChartCollectionViewCell.m in Sources */,
 				CD7E7DE41DE1CA4D00A76692 /* PieChartCollectionViewCell.m in Sources */,
 				CD7E7D941DE07BDD00A76692 /* main.m in Sources */,
