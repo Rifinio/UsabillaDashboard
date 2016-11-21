@@ -11,6 +11,7 @@
 		CD2057CA1DE27F5200D307DA /* ABUsabillaFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2057C81DE27F5200D307DA /* ABUsabillaFeedback.m */; };
 		CD2057CD1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */; };
 		CD52C8821DE3381F0025D8EF /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52C8811DE3381F0025D8EF /* EmojiView.m */; };
+		CD52C8841DE366B00025D8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */; };
 		CD7E7D941DE07BDD00A76692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D931DE07BDD00A76692 /* main.m */; };
 		CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D961DE07BDD00A76692 /* AppDelegate.m */; };
 		CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		CD2057CC1DE27F7200D307DA /* ABUsabillaFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABUsabillaFeedbackViewController.m; sourceTree = "<group>"; };
 		CD52C8801DE3381F0025D8EF /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
 		CD52C8811DE3381F0025D8EF /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
+		CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD7E7D8F1DE07BDD00A76692 /* UsabillaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsabillaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7D931DE07BDD00A76692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD7E7D951DE07BDD00A76692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */,
 				CD7E7DA01DE07BDD00A76692 /* LaunchScreen.storyboard */,
 				CD7E7DA31DE07BDD00A76692 /* Info.plist */,
+				CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */,
 				CD7E7D921DE07BDD00A76692 /* Supporting Files */,
 			);
 			path = UsabillaDashboard;
@@ -353,6 +356,7 @@
 			files = (
 				CD7E7DA21DE07BDD00A76692 /* LaunchScreen.storyboard in Resources */,
 				CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */,
+				CD52C8841DE366B00025D8EF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
