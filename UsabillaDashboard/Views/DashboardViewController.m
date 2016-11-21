@@ -20,17 +20,21 @@
 #import "BarChartCollectionViewCell.h"
 #import "HorizontalBarChartCollectionViewCell.h"
 
+#import "ABUsabillaFeedback.h"
+
 
 static NSString *baseCellId = @"baseCellId";
 static NSString *pieChartCellId = @"pieChartCellId";
 static NSString *barChartCellId = @"barChartCellId";
 static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
 
-@interface DashboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface DashboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ABUsabillaFeedbackDelegate>
 
-@property (nonatomic,strong, readonly) DashboardViewModel *viewModel;
+@property (nonatomic, strong, readonly) DashboardViewModel *viewModel;
 @property (nonatomic, strong) UICollectionView *collectoinView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
+
+@property (nonatomic, strong) ABUsabillaFeedback *usabillaFeedback;
 
 @end
 
@@ -75,7 +79,21 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
     }];
     [self.activityIndicator startAnimating];
 
+    // setup ABUSBLILLA
+    _usabillaFeedback = [ABUsabillaFeedback new];
+    self.usabillaFeedback.delegate = self;
+    self.usabillaFeedback.classes = @[[UILabel class], [UIImageView class]];
+
+    UIBarButtonItem *feedBackButton = [[UIBarButtonItem alloc] initWithTitle:@"feedback" style:UIBarButtonItemStylePlain target:self action:@selector(feedbackClicked)];
+    self.navigationItem.rightBarButtonItem = feedBackButton;
+
+
     [self bindViewModel];
+}
+
+- (void)feedbackClicked
+{
+    [self.usabillaFeedback highlightViews];
 }
 
 - (void)bindViewModel

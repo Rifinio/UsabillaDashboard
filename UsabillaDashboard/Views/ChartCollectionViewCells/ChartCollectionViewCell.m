@@ -47,7 +47,7 @@
         [self.contentView addSubview:self.titleLabel];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.equalTo(self.contentView).insets(UIEdgeInsetsMake(10, 20, 0, 10));
-            make.right.equalTo(self.moreLabel);
+            make.right.equalTo(self.moreLabel.mas_left);
             make.height.equalTo(@33);
         }];
 
