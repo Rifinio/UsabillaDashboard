@@ -110,6 +110,7 @@ static NSInteger usabillaTag = 22888;
 
 - (void)setupViewLayers:(UIView *)view
 {
+    view.userInteractionEnabled = YES;
     // Add highlighting buttons on top of views
     UIButton *frameButton = [UIButton buttonWithType:UIButtonTypeCustom];
     frameButton.tag = self.viewTag;
