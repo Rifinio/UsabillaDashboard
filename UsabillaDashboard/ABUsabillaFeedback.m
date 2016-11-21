@@ -7,7 +7,6 @@
 //
 
 #import "ABUsabillaFeedback.h"
-#import <UIKit/UIKit.h>
 #import <ChameleonFramework/Chameleon.h>
 
 static NSInteger usabillaTag = 22888;
@@ -131,6 +130,12 @@ static NSInteger usabillaTag = 22888;
     view.backgroundColor = [UIColor colorWithRed:255/255. green:0/255. blue:0/255. alpha:.3];
 }
 
+#pragma class methods
+
++ (UIImage *)usabillaBarButtonImage
+{
+    return [[UIImage imageNamed:@"usbailla-button-logo"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
 
 
 @end

@@ -51,10 +51,16 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor flatRedColor];
 
-    // set collection view
+    self.view.backgroundColor = [UIColor flatRedColor];
+    // setup navigation colors and style
+    [self.navigationController.navigationBar setBarTintColor:[UIColor flatBlueColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName]];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+
+    // setup collection view
     _collectoinView = [[UICollectionView alloc] initWithFrame:CGRectZero
                                          collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     self.collectoinView.dataSource = self;
@@ -84,7 +90,8 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
     self.usabillaFeedback.delegate = self;
     self.usabillaFeedback.classes = @[[UILabel class], [UIImageView class]];
 
-    UIBarButtonItem *feedBackButton = [[UIBarButtonItem alloc] initWithTitle:@"feedback" style:UIBarButtonItemStylePlain target:self action:@selector(feedbackClicked)];
+    UIImage *image = [ABUsabillaFeedback usabillaBarButtonImage];
+    UIBarButtonItem *feedBackButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(feedbackClicked)];
     self.navigationItem.rightBarButtonItem = feedBackButton;
 
 

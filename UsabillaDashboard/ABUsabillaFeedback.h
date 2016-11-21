@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol ABUsabillaFeedbackDelegate <NSObject>
 
@@ -19,5 +20,6 @@
 @property (nonatomic, assign) BOOL isFeedBackModeActivated;
 
 - (void)highlightViews;
++ (UIImage *)usabillaBarButtonImage;
 
 @end
