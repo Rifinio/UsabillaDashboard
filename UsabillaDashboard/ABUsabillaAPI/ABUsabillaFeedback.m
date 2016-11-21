@@ -8,6 +8,7 @@
 
 #import "ABUsabillaFeedback.h"
 #import <ChameleonFramework/Chameleon.h>
+#import "ABUsabillaFeedbackViewController.h"
 
 static NSInteger usabillaTag = 22888;
 
@@ -16,6 +17,8 @@ static NSInteger usabillaTag = 22888;
 @property (nonatomic, strong) NSMutableArray *selectedViews;
 @property (nonatomic, assign) NSInteger viewTag;
 @property (nonatomic, strong) UIButton *sendButton;
+@property (nonatomic, weak) UIViewController *delegateViewController;
+
 @end
 
 @implementation ABUsabillaFeedback
@@ -44,6 +47,9 @@ static NSInteger usabillaTag = 22888;
 
 - (void)sendFeedBack:(UIButton *)button
 {
+    ABUsabillaFeedbackViewController *feedbackVC = [ABUsabillaFeedbackViewController new];
+    [self.delegateViewController presentViewController:feedbackVC animated:YES completion:nil];
+
     NSLog(@"send");
 }
 
@@ -69,13 +75,13 @@ static NSInteger usabillaTag = 22888;
         return;
     }
 
-    UIViewController *delegateVC = (UIViewController *)self.delegate;
+    _delegateViewController = (UIViewController *)self.delegate;
     self.isFeedBackModeActivated = YES;
-    [self listSubviewsOfView:delegateVC.view];
+    [self listSubviewsOfView:self.delegateViewController.view];
 
     // add send button to delegate view
-    self.sendButton.frame = CGRectMake(0, delegateVC.view.frame.size.height-60, delegateVC.view.frame.size.width, 60);
-    [delegateVC.view addSubview:self.sendButton];
+    self.sendButton.frame = CGRectMake(0, self.delegateViewController.view.frame.size.height-60, self.delegateViewController.view.frame.size.width, 60);
+    [self.delegateViewController.view addSubview:self.sendButton];
 }
 
 - (void)listSubviewsOfView:(UIView *)view
