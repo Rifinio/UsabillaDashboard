@@ -35,6 +35,8 @@
 
     [self.window makeKeyAndVisible];
 
+    [FIRApp configure];
+
     return YES;
 }
 
