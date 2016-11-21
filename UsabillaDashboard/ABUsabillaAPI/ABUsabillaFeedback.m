@@ -10,6 +10,8 @@
 #import <ChameleonFramework/Chameleon.h>
 #import "ABUsabillaFeedbackViewController.h"
 
+@import FirebaseDatabase;
+
 
 static NSInteger usabillaTag = 22888;
 
@@ -20,6 +22,7 @@ static NSInteger usabillaTag = 22888;
 @property (nonatomic, strong) UIButton *sendButton;
 @property (nonatomic, weak) UIViewController *delegateViewController;
 
+@property (strong, nonatomic) FIRDatabaseReference *ref;
 
 @end
 
@@ -32,6 +35,9 @@ static NSInteger usabillaTag = 22888;
         _isFeedBackModeActivated = NO;
         _selectedViews = [NSMutableArray array];
         _viewTag = usabillaTag;
+
+        // init FireBase reference
+        _ref = [[FIRDatabase database] reference];
 
         // setup send button
         _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -138,12 +144,21 @@ static NSInteger usabillaTag = 22888;
     view.backgroundColor = [UIColor colorWithRed:255/255. green:0/255. blue:0/255. alpha:.3];
 }
 
+#pragma mark send feedback to firebase database
+- (void)sendFeedBack
+{
+    // static values to be filled later with correct data
+    NSDictionary *viewsDict = @{@"viewcontroller":@"DashboardViewController",@"viewDescription":@"<UILabel: 0x7fc0e6501c00; frame = (20 10; 284 33); text = 'Browsers'; layer = <_UILabelLayer: 0x61800009bb70>>",@"frame":@"(20 10; 284 33)"};
+    NSDictionary *feedBackDict = @{@"Rating":@5, @"Comment":@"my first feedback",@"views":viewsDict};
+    [[self.ref child:@"Feedback"] setValue:feedBackDict];
+}
+
+
 #pragma class methods
 
 + (UIImage *)usabillaBarButtonImage
 {
     return [[UIImage imageNamed:@"usbailla-button-logo"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
-
 
 @end
