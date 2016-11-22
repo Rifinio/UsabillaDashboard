@@ -12,7 +12,7 @@
 #import "EmojiView.h"
 #import "EmojisView.h"
 
-@interface ABUsabillaFeedbackViewController ()
+@interface ABUsabillaFeedbackViewController () <UITextViewDelegate>
 
 @property (nonatomic, strong) EmojisView *emoView;
 @property (nonatomic, strong) UITextView *textViewFeedBack;
@@ -26,6 +26,8 @@
     // Do any additional setup after loading the view.
 
     self.view.backgroundColor = [UIColor flatWhiteColor];
+    UITapGestureRecognizer *tapGetsure = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignKeyboard:)];
+    [self.view addGestureRecognizer:tapGetsure];
 
     UIView *navigationView = [UIView new];
     navigationView.backgroundColor = [UIColor flatNavyBlueColor];
@@ -150,6 +152,11 @@
 - (void)cancelAction:(UIButton *)button
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)resignKeyboard:(UIView *)view
+{
+    [self.view endEditing:YES];
 }
 
 @end
