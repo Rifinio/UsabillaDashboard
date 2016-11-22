@@ -13,6 +13,7 @@
 		CD52C8841DE366B00025D8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD52C8831DE366B00025D8EF /* GoogleService-Info.plist */; };
 		CD52C8891DE38DCA0025D8EF /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52C8871DE38DCA0025D8EF /* EmojiView.m */; };
 		CD52C88C1DE3901D0025D8EF /* EmojisView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52C88B1DE3901D0025D8EF /* EmojisView.m */; };
+		CD52C8911DE4816E0025D8EF /* FeedbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD52C8901DE4816E0025D8EF /* FeedbackTests.m */; };
 		CD7E7D941DE07BDD00A76692 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D931DE07BDD00A76692 /* main.m */; };
 		CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D961DE07BDD00A76692 /* AppDelegate.m */; };
 		CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		CD52C8881DE38DCA0025D8EF /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
 		CD52C88A1DE3901D0025D8EF /* EmojisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojisView.h; sourceTree = "<group>"; };
 		CD52C88B1DE3901D0025D8EF /* EmojisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojisView.m; sourceTree = "<group>"; };
+		CD52C8901DE4816E0025D8EF /* FeedbackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackTests.m; sourceTree = "<group>"; };
 		CD7E7D8F1DE07BDD00A76692 /* UsabillaDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsabillaDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7E7D931DE07BDD00A76692 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD7E7D951DE07BDD00A76692 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,7 +68,6 @@
 		CD7E7DA11DE07BDD00A76692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7E7DA31DE07BDD00A76692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7E7DA81DE07BDD00A76692 /* UsabillaDashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsabillaDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsabillaDashboardTests.m; sourceTree = "<group>"; };
 		CD7E7DAE1DE07BDD00A76692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7E7DC41DE080E200A76692 /* NSURLSession+RAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+RAC.h"; sourceTree = "<group>"; };
 		CD7E7DC51DE080E200A76692 /* NSURLSession+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+RAC.m"; sourceTree = "<group>"; };
@@ -207,8 +208,8 @@
 		CD7E7DAB1DE07BDD00A76692 /* UsabillaDashboardTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */,
 				CD7E7DAE1DE07BDD00A76692 /* Info.plist */,
+				CD52C8901DE4816E0025D8EF /* FeedbackTests.m */,
 			);
 			path = UsabillaDashboardTests;
 			sourceTree = "<group>";
@@ -510,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD52C8911DE4816E0025D8EF /* FeedbackTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
