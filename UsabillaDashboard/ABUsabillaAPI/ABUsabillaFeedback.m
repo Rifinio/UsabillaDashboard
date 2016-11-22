@@ -74,6 +74,9 @@ static NSInteger usabillaTag = 22888;
         if (view) [view removeFromSuperview];
     }
 
+    self.selectedViews = nil;
+    self.selectedViews = [NSMutableArray array];
+
     self.isFeedBackModeActivated = NO;
 }
 
@@ -147,7 +150,7 @@ static NSInteger usabillaTag = 22888;
 #pragma mark send feedback to firebase database
 - (void)pushFeedBack:(NSDictionary *)feedBackDict
 {
-    [[self.ref child:@"Feedback"] setValue:feedBackDict];
+    [[[self.ref child:@"Feedback"] childByAutoId] setValue:feedBackDict];
 }
 
 
@@ -168,18 +171,23 @@ static NSInteger usabillaTag = 22888;
     }
 
     NSMutableDictionary *readyFeedBackDict = [NSMutableDictionary dictionary];
+
+    readyFeedBackDict[@"date"] = @{@".sv":@"timestamp"};
+    readyFeedBackDict[@"DeviceModel"] = [UIDevice currentDevice].model;
+    readyFeedBackDict[@"SystemVersion"] = [UIDevice currentDevice].systemName;
+    readyFeedBackDict[@"ScreenSize"] = NSStringFromCGRect([[UIScreen mainScreen] bounds]);
     readyFeedBackDict[@"Rating"] = feedBackDict[@"Rating"];
     readyFeedBackDict[@"Comment"] = feedBackDict[@"Message"];
     readyFeedBackDict[@"Views"] = [viewsDescriptions copy];
+
     UIViewController *delegateVC = (UIViewController *)self.delegate;
     readyFeedBackDict[@"ViewController"] = delegateVC.description;
 
     [self pushFeedBack:[readyFeedBackDict copy]];
 
+    // dismiss feedback view and show an alert
     [viewController dismissViewControllerAnimated:YES completion:nil];
-
     [self unHighlightViews];
-
     UIAlertController *alertController = [UIAlertController
                                           alertControllerWithTitle:@"Thank you"
                                           message:@"Your feedback is sent successfully! \nWe appriciate you taking the time let us know what you think."
@@ -190,7 +198,6 @@ static NSInteger usabillaTag = 22888;
                                handler:nil];
 
     [alertController addAction:okAction];
-
     [self.delegate presentViewController:alertController animated:YES completion:nil];
 }
 
