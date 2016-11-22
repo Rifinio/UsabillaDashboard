@@ -177,11 +177,27 @@ static NSInteger usabillaTag = 22888;
     [self pushFeedBack:[readyFeedBackDict copy]];
 
     [viewController dismissViewControllerAnimated:YES completion:nil];
+
+    [self unHighlightViews];
+
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Thank you"
+                                          message:@"Your feedback is sent successfully! \nWe appriciate you taking the time let us know what you think."
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:nil];
+
+    [alertController addAction:okAction];
+
+    [self.delegate presentViewController:alertController animated:YES completion:nil];
 }
 
 -(void)usabillaViewControllerDidCancel:(ABUsabillaFeedbackViewController *)viewController
 {
     [viewController dismissViewControllerAnimated:YES completion:nil];
+    [self unHighlightViews];
 }
 
 @end
