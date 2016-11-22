@@ -54,8 +54,9 @@
 {
     self = [self init];
     if (self) {
-        [self.emojiButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"face-%ld", rating]] forState:UIControlStateNormal];
         _rating = rating;
+        [self.emojiButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"face-%ld", rating]] forState:UIControlStateNormal];
+
     }
     return self;
 }
@@ -65,8 +66,6 @@
 
 - (void)emojiClicked:(UIButton *)button
 {
-    NSLog(@"clicked :%ld", self.rating);
-
     if (self.isSelected) {
         [self setHighlighted:NO];
         [self.delegate emojiButtonDeselected:self];

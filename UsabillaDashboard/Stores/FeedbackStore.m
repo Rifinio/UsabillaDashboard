@@ -17,6 +17,8 @@
 
 @end
 
+static NSString *usabillaUrl = @"http://cache.usabilla.com/example/apidemo.json";
+
 static NSString *labelBug = @"Bug";
 static NSString *labelCompliment = @"Compliment";
 static NSString *labelQuestion = @"Question";
@@ -36,7 +38,7 @@ static NSString *labelOther = @"Other";
 
 - (RACSignal *)fetchFeedBack
 {
-    NSURL *url = [NSURL URLWithString:@"http://cache.usabilla.com/example/apidemo.json"];
+    NSURL *url = [NSURL URLWithString:usabillaUrl];
 
     return [[[NSURLSession sharedSession] rac_GET:url]
             map:^(RACTuple *tuple) {
@@ -47,7 +49,6 @@ static NSString *labelOther = @"Other";
                 NSMutableArray *feedbackList = [NSMutableArray array];
                 for (NSDictionary *dict in feedBackDictionary[@"items"]) {
                     Feedback *feedback = [[Feedback alloc] initWithJsonDict:dict];
-                    NSLog(@"browser : %@ | email : %@", feedback.browserName, feedback.email);
                     [feedbackList addObject:feedback];
                 }
 
