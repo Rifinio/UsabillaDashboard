@@ -16,17 +16,17 @@ Once the parameters made sense, i had the idea of showing the data in a dashboar
 i created one myself.
 
 ## Screenshots
-### Mainview : Dashboard
+#### Mainview : Dashboard
 A collectionView that shows the different KPI in different chart types : PieChart, Horizontal Bar Chart and Vertical bar chart.
 
 ![alt tag](https://s16.postimg.org/annsxh3ad/dashboard_screenshots.png)
 
-## ABUsabillaAPI
+### ABUsabillaAPI
 So, ABUsabillaAPI allows you to implement it in any ViewController and helps you highlight the UI elements that you as a developer want the user to be able to highlight and give feedback about.
 
 ![alt tag](https://s22.postimg.org/oso56qekx/feedback_Api_screenshots.png)
 
-### Usage ?
+## Usage ?
 * Implement ```<ABUsabillaFeedbackDelegate>``` in your viewController
 
 * declare usabillaFeedback object as a property
