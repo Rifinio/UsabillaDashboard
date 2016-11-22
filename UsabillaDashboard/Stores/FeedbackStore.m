@@ -36,8 +36,7 @@ static NSString *labelOther = @"Other";
 
 - (RACSignal *)fetchFeedBack
 {
-    //https://api.myjson.com/bins/58cee
-    NSURL *url = [NSURL URLWithString:@"https://api.myjson.com/bins/58cee"];
+    NSURL *url = [NSURL URLWithString:@"http://cache.usabilla.com/example/apidemo.json"];
 
     return [[[NSURLSession sharedSession] rac_GET:url]
             map:^(RACTuple *tuple) {
