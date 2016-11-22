@@ -112,6 +112,9 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
          @strongify(self); // this, together with @weakify, prevents a retain cycle
          [self.collectoinView reloadData];
          [self.activityIndicator stopAnimating];
+     } error:^(NSError *error) {
+         [self.activityIndicator stopAnimating];
+         NSLog(@"ERROR happened :%@",error.description);
      }];
 }
 
