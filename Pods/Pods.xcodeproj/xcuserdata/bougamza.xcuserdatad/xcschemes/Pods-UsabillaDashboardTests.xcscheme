@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "229DD938AF0C8B69C370BFA44CC20575"
+               BlueprintIdentifier = "E248276F89885E50A3A95B8070F1C50C"
                BuildableName = "Pods_UsabillaDashboardTests.framework"
                BlueprintName = "Pods-UsabillaDashboardTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD7E7DA71DE07BDD00A76692"
+               BuildableName = "UsabillaDashboardTests.xctest"
+               BlueprintName = "UsabillaDashboardTests"
+               ReferencedContainer = "container:../UsabillaDashboard.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E248276F89885E50A3A95B8070F1C50C"
+            BuildableName = "Pods_UsabillaDashboardTests.framework"
+            BlueprintName = "Pods-UsabillaDashboardTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "229DD938AF0C8B69C370BFA44CC20575"
+            BlueprintIdentifier = "E248276F89885E50A3A95B8070F1C50C"
             BuildableName = "Pods_UsabillaDashboardTests.framework"
             BlueprintName = "Pods-UsabillaDashboardTests"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E248276F89885E50A3A95B8070F1C50C"
+            BuildableName = "Pods_UsabillaDashboardTests.framework"
+            BlueprintName = "Pods-UsabillaDashboardTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

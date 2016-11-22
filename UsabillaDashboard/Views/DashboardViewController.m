@@ -167,8 +167,8 @@ static NSString *HorizontalBarChartCellId = @"HorizontalBarChartCellId";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    DetailViewController *dvc = [DetailViewController new];
-//    [self.navigationController pushViewController:dvc animated:YES];
+    DetailViewController *dvc = [DetailViewController new];
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 @end
