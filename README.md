@@ -19,15 +19,50 @@ Once the parameters made sense, i had the idea of showing the data in a dashboar
 ### Mainview : Dashboard
 A collectionView that shows the different KPI in different chart types : PieChart, Horizontal Bar Chart and Vertical bar chart.
 
-![alt tag](https://s13.postimg.org/9qq2fypdz/Simulator_Screen_Shot_22_nov_2016_a_01_26_05.png)
-
-![alt tag](https://s22.postimg.org/y1km84kfl/Simulator_Screen_Shot_22_nov_2016_a_01_26_18.png)
+![alt tag](https://s16.postimg.org/annsxh3ad/dashboard_screenshots.png)
 
 ## ABUsabillaAPI
 So, ABUsabillaAPI allows you to implement it in any ViewController and helps you highlight the UI elements that you as a developer want the user to be able to highlight and give feedback about.
 // screenshot of feedback here
 ###how to use ?
-// code 
+* Implement ```<ABUsabillaFeedbackDelegate>``` in your viewController
 
+* declare usabillaFeedback object as a property
+```@property (nonatomic, strong) ABUsabillaFeedback *usabillaFeedback;```
+
+* Then in your viewDidLoad add this snippet :
+```
+    _usabillaFeedback = [ABUsabillaFeedback new];
+    self.usabillaFeedback.delegate = self;
+    self.usabillaFeedback.classes = @[[UILabel class], [UIImageView class]];
+```
+Specify in ```.classes``` the UI elements classes that you want to let your users highlight and give feedback about.
+
+* Add usabilla feedback button to you navigation bar
+```
+    UIImage *image = [ABUsabillaFeedback usabillaBarButtonImage];
+    UIBarButtonItem *feedBackButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(feedbackClicked)];
+    self.navigationItem.rightBarButtonItem = feedBackButton;
+```
+* create a button action method : ```feedbackClicked``` that will call usabillaFeedBack object and highlight the UI Objects
+```
+- (void)feedbackClicked
+{
+    [self.usabillaFeedback highlightViews];
+}
+```
+Done, now users can click and highlight the views they want to give feedback about and give you their feedback.
+
+## External Pods
+
+* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+* [Firebase](https://github.com/firebase/)
+
+* [Masonry](https://github.com/SnapKit/Masonry)
+* [ChameleonFramework](https://github.com/ViccAlexander/Chameleon)
+* [Charts](https://github.com/danielgindi/Charts)
+
+* [Kiwi](https://github.com/kiwi-bdd/Kiwi)
+* [OCMock](https://github.com/erikdoe/ocmock)
 
 
