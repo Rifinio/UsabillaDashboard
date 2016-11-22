@@ -7,6 +7,7 @@
 //
 
 #import <Kiwi/Kiwi.h>
+#import <OCMock/OCMock.h>
 #import "FeedbackStore.h"
 
 SPEC_BEGIN(FeedbackStoreTests)
