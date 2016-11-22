@@ -29,6 +29,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+  - Kiwi (2.4.0)
   - Masonry (1.0.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - Charts
   - Firebase/Core
   - Firebase/Database
+  - Kiwi (~> 2.4)
   - Masonry
   - ReactiveCocoa (= 2.5)
 
@@ -57,9 +59,10 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
-PODFILE CHECKSUM: 476d71382a99bac5542974bec8fcd89d275f93c4
+PODFILE CHECKSUM: 6b2007683971efd5d33e23f20e4b08932924d68c
 
 COCOAPODS: 1.1.1

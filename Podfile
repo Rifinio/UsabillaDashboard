@@ -15,6 +15,8 @@ target 'UsabillaDashboard' do
   target 'UsabillaDashboardTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Kiwi', '~> 2.4'
+
   end
 
 end

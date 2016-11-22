@@ -17,7 +17,6 @@
 		CD7E7D971DE07BDD00A76692 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7D961DE07BDD00A76692 /* AppDelegate.m */; };
 		CD7E7D9F1DE07BDD00A76692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7D9E1DE07BDD00A76692 /* Assets.xcassets */; };
 		CD7E7DA21DE07BDD00A76692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7E7DA01DE07BDD00A76692 /* LaunchScreen.storyboard */; };
-		CD7E7DAD1DE07BDD00A76692 /* UsabillaDashboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DAC1DE07BDD00A76692 /* UsabillaDashboardTests.m */; };
 		CD7E7DC61DE080E200A76692 /* NSURLSession+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DC51DE080E200A76692 /* NSURLSession+RAC.m */; };
 		CD7E7DC91DE0813100A76692 /* FeedbackStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DC81DE0813100A76692 /* FeedbackStore.m */; };
 		CD7E7DCC1DE081B300A76692 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E7DCB1DE081B300A76692 /* Feedback.m */; };
@@ -511,7 +510,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7E7DAD1DE07BDD00A76692 /* UsabillaDashboardTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

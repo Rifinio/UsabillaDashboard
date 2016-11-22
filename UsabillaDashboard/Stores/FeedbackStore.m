@@ -17,7 +17,7 @@
 
 @end
 
-static NSString *usabillaUrl = @"http://cache.usabilla.com/example/apidemo.json";
+static NSString *usabillaUrl = @"http://localhost:8888/usabilla/usabilla-ws.json";
 
 static NSString *labelBug = @"Bug";
 static NSString *labelCompliment = @"Compliment";
