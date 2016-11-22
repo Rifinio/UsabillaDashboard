@@ -197,7 +197,6 @@ static NSInteger usabillaTag = 22888;
 -(void)usabillaViewControllerDidCancel:(ABUsabillaFeedbackViewController *)viewController
 {
     [viewController dismissViewControllerAnimated:YES completion:nil];
-    [self unHighlightViews];
 }
 
 @end

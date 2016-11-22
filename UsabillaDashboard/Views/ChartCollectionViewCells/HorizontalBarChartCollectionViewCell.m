@@ -45,8 +45,7 @@
     // Create data entries for every data point
     NSMutableArray <BarChartDataEntry *> *dataEntries = [NSMutableArray array];
     for (int i = 0; i< points.count; i++) {
-        BarChartDataEntry *dataEntry = [[BarChartDataEntry alloc] initWithX:i y:values[i].doubleValue];
-//        BarChartDataEntry *dataEntry = [[BarChartDataEntry alloc] initWithX:points[i].integerValue y:values[i].doubleValue];
+        BarChartDataEntry *dataEntry = [[BarChartDataEntry alloc] initWithX:i+1 y:values[i].doubleValue];
 
         [dataEntries addObject:dataEntry];
     }
@@ -59,6 +58,13 @@
     BarChartData *chartData = [[BarChartData alloc] initWithDataSet:dataSet];
 
     [chartView animateWithXAxisDuration:1.5 yAxisDuration:1.5];
+
+    chartView.xAxis.labelPosition = XAxisLabelPositionBottom;
+    chartView.xAxis.drawGridLinesEnabled = NO;
+    chartView.legend.enabled = YES;
+    chartView.rightAxis.enabled = NO;
+
+
     chartView.data = chartData;
 }
 
