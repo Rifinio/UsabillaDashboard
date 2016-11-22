@@ -43,10 +43,7 @@ describe(@"Feedback", ^{
             [[theValue(feedback.labels.count == @[dummyLabel].count) should] beTrue];
             [[feedback.labels should] containObjectsInArray:@[dummyLabel]];
         });
-
     });
-    
-    
 });
 
 SPEC_END
