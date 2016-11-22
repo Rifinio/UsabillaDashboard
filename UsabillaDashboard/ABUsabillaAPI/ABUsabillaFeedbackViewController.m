@@ -105,6 +105,8 @@
     self.textViewFeedBack.layer.borderWidth = 0.3f;
     self.textViewFeedBack.layer.cornerRadius = 3.0;
     self.textViewFeedBack.clipsToBounds = YES;
+    self.textViewFeedBack.font = [UIFont systemFontOfSize:20.0f];
+    self.textViewFeedBack.textColor = [UIColor flatNavyBlueColor];
     [self.view addSubview:self.textViewFeedBack];
 
     // send and cancel buttons
